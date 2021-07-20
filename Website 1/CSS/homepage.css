@@ -14,9 +14,35 @@
 body{
     padding: 0;
     margin: 0;
+    position: inherit;
 }
 
-.nav-bar{
+nav:nth-child(1){
+    position: fixed;
+    background: white;
+    width: -webkit-fill-available;
+}
+
+nav:nth-child(1) > ul{
+    list-style: none;
+    display: flex;
+    font-family: 'Source Sans Pro';
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+nav:nth-child(1) > ul > li{
+    padding: 1% 5%;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+nav:nth-child(1) > ul > li:hover{
+    background: var(--ic-light-gray);
+    border-radius: 40px;
+}
+
+.navbar{
     display: none;
 }
 
@@ -56,7 +82,6 @@ h1{
 .contact-btn{
     text-transform: uppercase;
     background: var(--btn-primary);
-    position: relative;
     border: none;
     padding: 2% 5%;
     margin: 0;
@@ -71,27 +96,6 @@ h1{
     text-align: left;
     justify-content: center;
     align-items: center;
-}
-
-.contact-btn::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background-color: rgba(255,255,255,0.4);
-      -webkit-transition: none;
-         -moz-transition: none;
-              transition: none;
-}
-
-.contact-btn:hover:after {
-    width: 100%;
-    background-color: rgba(255,255,255,0);
-      -webkit-transition: all 0.4s ease-in-out;
-         -moz-transition: all 0.4s ease-in-out;
-              transition: all 0.4s ease-in-out;
 }
 
 .contact-btn > i{
