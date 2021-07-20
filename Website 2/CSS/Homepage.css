@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Roboto+Condensed:wght@700&family=Roboto+Slab:wght@300;500&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.container-one{
+    height: inherit;
+    background: orange;
+}
+
+.navbar > ul{
+    list-style: none;
+    display: flex;
+    margin: 0;
+    justify-content: center;
+}
+
+.navbar > ul > li{
+    padding: 1% 5%;
+    margin: 1% 5%;
+    font-family: 'Roboto Condensed';
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+.navbar > ul > li:hover, .active{
+    background: white;
+    color: black;
+}
+
+.black{
+    background: black;
+    color: white;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.sub-container-one{
+    padding: 7% 8%;
+    display: flex;
+    overflow: hidden;
+}
+
+h1{
+    font-size: 50px;
+    font-family: 'Roboto Slab';
+    text-transform: capitalize;
+    letter-spacing: 4px;
+}
+
+h1 > span{
+    font-size: 60px;
+    display: block;
+    color: white;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+}
+
+.sub-container-one > div:nth-child(1) > p{
+    width: 70%;
+    font-family: 'Nunito';
+    font-weight: 300;
+    line-height: 30px;
+    text-align: justify;
+}
+
+.sub-container-one > div:nth-child(2) > i{
+    font-size: 430px;
+    margin-right: -340px;
+}
+
+@media(max-width:1000px){
+
+    .container-one{
+        padding: 2%;
+    }
+
+    .navbar{
+        padding: 4%;
+    }
+
+    .navbar > ul > li{
+        padding: 1% 2%;
+        margin: 1% 2%;
+        font-size: 12px;
+    }
+
+    h1, h1 > span{
+        font-size: 30px;
+    }
+
+    .sub-container-one > div:nth-child(2){
+        display:none;
+    }
+
+    .sub-container-one > div:nth-child(1) > p {
+        width: 100%;
+    }
+}
