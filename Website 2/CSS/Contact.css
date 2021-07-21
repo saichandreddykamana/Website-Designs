@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Nunito:wght@300&family=Roboto+Condensed:wght@700&family=Roboto+Slab:wght@300;500&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.container-one{
+    background: none;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-container-group{
+    display: flex;
+}
+
+.form-container-group > div{
+    width: 50%;
+}
+
+.sub-container-one{
+    padding: 3% 8%;
+    margin: 0;
+    display: block;
+}
+
+h1{
+    text-transform: uppercase;
+    font-family: 'Roboto Condensed';
+    letter-spacing: 8px;
+    font-size: 35px;
+}
+
+.sub-container-one > p{
+    line-height: 30px;
+    letter-spacing: 1px;
+    text-align: justify;
+    font-family: 'Open Sans';
+}
+
+.sub-container-one > p > i{
+    color: orange;
+    padding: 1% 2%;
+}
+
+.sub-container-one > p > span{
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.sub-container-two{
+    background: orange;
+    margin: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.sub-container-two > form{
+    display: grid;
+    width: 70%;
+    padding: 10% 5%;
+}
+
+.sub-container-two > form > input, .sub-container-two > form  textarea{
+    padding: 2%;
+    margin: 1% 4%;
+    border-radius: 3px;
+    border: 1px solid orange;
+}
+
+::-webkit-input-placeholder {
+    font-family: 'Open Sans';
+    font-size: 13px;
+    color: rgb(180, 180, 180);
+    font-weight: bold;
+    text-transform: capitalize;
+    letter-spacing: 4px;
+}
+
+.sub-container-two > form > input[type='submit']{
+    background: black;
+    border: none;
+    border-radius: 40px;
+    color: white;
+    letter-spacing: 4px;
+    font-family: 'Roboto Condensed';
+    text-transform: uppercase;
+    padding: 2% 5%;
+    width: 60%;  
+    justify-self: center;
+    cursor: pointer;
+}
+
+.navbar > ul > li:hover, .active{
+    background: orange;
+    color: black;
+}
+
+@media(max-width:1000px){
+
+    .container-one{
+        height: inherit;
+    }
+
+    .form-container-group{
+        display: block;
+    }
+
+    .form-container-group > div{
+        width: -webkit-fill-available;
+        padding: 1% 5%;
+    }
+}
