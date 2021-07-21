@@ -65,7 +65,8 @@ p{
     font-family: 'Open Sans';
     font-size: 14px;
     letter-spacing: 1px;
-    text-transform: capitalize;
+    text-transform: capitalize;    
+    padding: 1% 0% 0% 10%;
 }
 
 .group{
@@ -161,4 +162,25 @@ form input[type='submit']{
 ::-webkit-input-placeholder{
     font-family: 'Roboto Condensed';
     letter-spacing: 2px;
+}
+
+@media(max-width:900px){
+    .sub-container-one{
+        display: none;
+    }
+
+    .form-container{
+        width: 60%;
+        height: inherit;
+    }
+
+    .sub-container-two{
+        display: block;
+        align-items: center;
+        height: fit-content;
+    }
+
+    .form-container{
+        position: relative;
+    }
 }
