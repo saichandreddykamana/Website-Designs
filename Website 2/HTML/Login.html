@@ -5,21 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../CSS/Homepage.css">
+    <link rel="stylesheet" href="../CSS/Login.css">
     <title>Login</title>
 </head>
 <body>
     <div class="container-one">
-        <nav class="navbar">
-            <ul>
-                <li><a href="../HTML/Homepage.html"> Home </a></li>
-                <li><a href="../HTML/Contact.html">Contact</a></li>
-                <li class="active"><a href="../HTML/Login.html">Login</a></li>
-                <li class="black"><a href="../HTML/Register.html">Register</a></li>
-            </ul>
-        </nav>
-        <div class="sub-container-one">
-            
+        <div class="sub-container-group">
+                <div class="sub-container-one">
+                   <img src="../Images/login-wallpaper.png" alt="Man standing Vector Image">
+                </div>
+                <div class="sub-container-two">
+                    <div class="login-description">
+                        <nav class="navbar">
+                            <ul>
+                                <li class="active"><a href="../HTML/Homepage.html"> Home </a></li>
+                                <li><a href="../HTML/Contact.html">Contact</a></li>
+                            </ul>
+                        </nav>
+                        <h1>Lorem ipsum</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga provident totam ea quia expedita molestias, excepturi reiciendis eligendi nisi quidem.</p>
+                    </div>
+                    <div class="login-form">
+                        <form action="">
+                            <input type="email" name="email" id="email" placeholder="E-Mail Address">
+                            <input type="password" name="password" id="password" placeholder="Password">
+                            <div class="group">
+                                <input type="submit" value="Login Now">
+                                <input type="submit" value="Create Account">
+                            </div>
+                        </form>
+                        <h2><span> Or login with </span></h2>
+                        <div class="social-icons">
+                            <a href="#" class="fa fa-facebook"></a>
+                            <a href="#" class="fa fa-google"></a>
+                            <a href="#" class="fa fa-linkedin"></a>
+                        </div>
+                    </div>
+                </div>
         </div>
     </div>
 </body>
