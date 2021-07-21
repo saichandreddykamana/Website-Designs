@@ -88,7 +88,7 @@ body{
     justify-content: center;
 }
 
-.login-form > form > div > input[type='submit']{
+.login-form > form > div > input[type='submit'], .login-form > form > div > a{
     padding: 2% 5%;
     margin: 5%;
     border: none;
@@ -99,14 +99,14 @@ body{
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
-.login-form > form > div > input:nth-child(1){
+.login-form > form > div > input{
     width: 30%;
     background: #0734dae8;
     color: white;
     border-radius: 40px;
 }
 
-.login-form > form > div > input:nth-child(2){
+.login-form > form > div > a{
     border-radius: 40px;
 }
 
