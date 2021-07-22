@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Nunito:wght@300&family=Roboto+Condensed:wght@700&family=Roboto+Slab:wght@300;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&family=Noto+Sans&family=Poppins:wght@300&family=Source+Sans+Pro:ital,wght@1,300&family=Open+Sans&family=Raleway&family=Nunito:wght@300&family=Roboto+Condensed:wght@700&family=Roboto+Slab:wght@300;500&display=swap');
 
 body{
     margin: 0;
     padding: 0;
-    height: 200vh;
+    background: #e0e0e026;
 }
 
 nav{
@@ -11,7 +11,7 @@ nav{
     width: 100%;
     margin: 0;
     top: 0;
-    border-bottom: 1px solid #f7f1f1;
+    border: none;
 }
 
 .nav-hamburger-menu{    
@@ -73,6 +73,12 @@ nav .nav-menu li:nth-child(n + 2):hover, .menu-list li:hover{
 .container{
     display: flex;
     height: inherit;
+    width: 100%;
+}
+
+.body-container{
+    height: inherit;
+    width: inherit;
 }
 
 .close{
@@ -86,7 +92,7 @@ nav .nav-menu li:nth-child(n + 2):hover, .menu-list li:hover{
     display: none;
     background: rgb(241, 241, 241, 0.46);
     width: 250px;
-    height: inherit;
+    height: -webkit-fill-available;
 }
 
 .side-menu ul{
@@ -108,22 +114,217 @@ nav .nav-menu li:nth-child(n + 2):hover, .menu-list li:hover{
     font-weight: bold;
 }
 
-.body-container{
-    height: inherit;
-    padding-top: 5%;
-}
-
 .slide-in{
     animation: slideDown 300ms ease-in-out forwards;
     transform-origin: top center;
 }
 
 .slide-right{
-    position: absolute;
+    position: fixed;
     left: -150px;
     background: rgb(246, 246, 246);
     -webkit-animation: slideRight 0.5s forwards;
     animation: slideRight 0.5s forwards;
+}
+
+.trending-container{
+    background-image: url('../Images/trending-bg.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 720px;
+    display: flex;
+    align-items: center;
+}
+
+.trending-description{
+    width: 50%;
+}
+
+.trending-description div{
+    padding: 5%;
+    margin: 2% 5%;
+    border: 5px solid white;
+}
+
+.trending-description h1{
+    color: white;
+    font-size: 50px;
+    font-family: 'Roboto Condensed';
+}
+
+.trending-description p{
+    color: white;
+    text-align: justify;
+    font-family: 'Poppins';
+}
+
+.trending-description button{    
+    background: black;
+    color: white;
+    border: none;
+    padding: 2% 5%;
+    font-family: 'Roboto Condensed';
+    text-transform: uppercase;
+    font-size: 18px;
+    letter-spacing: 3px;
+    cursor: pointer;
+}
+
+.trending-description button:hover{
+    background: white;
+    color: black;
+}
+
+.men-container, .women-container, .children-container{
+    margin: 2% 0%;
+    display: flex;
+    align-items: center;
+}
+
+.men-items, .women-items, .children-items{
+    display: -webkit-inline-box;
+    overflow: hidden;
+    width: fit-content;
+}
+
+.men-items .item{
+    width: 300px;
+}
+
+.women-items .item{
+    width: 700px;    
+    display: flex;
+}
+
+.item{
+    padding: 1%;
+    margin: 1%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.item:hover{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.item-image-container{
+    text-align: center;
+}
+
+.item-image{
+    width: 60%;
+}
+
+.item-heading{
+    text-align: center;
+}
+
+.item-heading h2{
+    font-family: 'Roboto Condensed';
+    letter-spacing: 4px;
+    text-transform: capitalize;
+}
+
+.item-description{
+    text-align: center;
+}
+
+.item-description p{
+    font-family: 'Open Sans';
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.item-description button{
+    background: black;
+    border: none;
+    font-family: 'Roboto Condensed';
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: white;
+    padding: 2% 4%;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.item-description button:hover{
+    color: black;
+    background: white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.children-three-item{
+    display: flex;
+}
+
+.children-group-one .item{
+    height: 405px;
+}
+
+.children-group-one .item-image{
+    width: 30%;
+}
+
+.children-group-two .item{
+    display: flex;
+}
+
+.children-group-two{
+    display: block;
+}
+
+.left-arrow, .right-arrow{
+    padding: 2%;
+    background: white;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.left-arrow{
+    float: left;
+}
+
+.right-arrow{
+    float: right;
+}
+
+.left-arrow i, .right-arrow i{
+    font-size: 20px;
+}
+
+.footer-container{
+}
+
+.sub-footer-one{
+    padding: 2% 5%;
+    margin: 0;
+    background: black;
+}
+
+.sub-footer-one h3{
+    font-family: 'Roboto Condensed';
+    font-size: 30px;
+    letter-spacing: 5px;
+    color: white;
+    text-transform: uppercase;
+}
+
+.sub-footer-one p{
+    font-family: 'Open Sans';
+    color: white;
+}
+
+.sub-footer-three{
+    padding: 5px;
+    margin: 0;
+    background: rgb(25, 25, 25, 1);
+}
+
+.sub-footer-three p{
+    color: white;
+    font-family: 'Raleway';
+    text-align: center;
 }
 
 @keyframes slideRight {

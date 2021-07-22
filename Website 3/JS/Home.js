@@ -15,9 +15,11 @@ $(window).scroll(function(){
 $( window ).resize(function() {
     if($(window).width() <= 1000){
         showHamburgerMenu();
+        $('.trending-description').css('width', '90%');
         hideAllMenuList();
     }else{
         showNavMenu();
+        $('.trending-description').css('width', '50%');
         $('.side-menu').css('display','none');
     }
 });
@@ -40,7 +42,6 @@ function showHamburgerMenu(){
 
 function showNavMenu(){
     $('.nav-menu').css('display', 'flex');
-    $('nav').css('border-bottom','1px solid #f7f1f1');
     $('.nav-hamburger-menu').css('display','none');
     $('.nav-menu').addClass('slide-in'); 
 }
@@ -70,3 +71,11 @@ $('.close').bind('click', function(){
     $('.side-menu').css('display','none');
     $('.nav-hamburger-menu').css('display', 'block');
 });
+
+function scroll_right(btn, items){
+    $(items).animate({scrollLeft: '+=1000'}, 600);
+}
+
+function scroll_left(btn, items){
+    $(items).animate({scrollLeft: '0'}, 600);
+}
