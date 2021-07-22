@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&family=Noto+Sans&family=Poppins:wght@300&family=Source+Sans+Pro:ital,wght@1,300&family=Open+Sans&family=Raleway&family=Nunito:wght@300&family=Roboto+Condensed:wght@700&family=Roboto+Slab:wght@300;500&display=swap');
+
+html { 
+    height:100%;
+}
+
+body { 
+    min-height:100%;
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    width: 100%;
+    margin: 0;
+    border: none;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding: 1%;
+    margin: 0;
+    justify-content: space-between;
+}
+
+nav ul li:nth-child(n + 2){
+    font-family: 'Raleway';
+    font-size: 16px;
+    font-weight: bold;
+    padding: 1% 5%;
+    cursor: pointer;
+}
+
+nav ul li:nth-child(n + 2):not(:last-child):hover{
+    background: rgb(235, 234, 234);
+}
+
+nav ul li button{
+    background: black;
+    border : 2px solid black;
+    color: white;
+    font-family: 'Roboto Condensed';
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    padding: 15% 50%;
+    cursor: pointer;
+    font-size: 18px;
+    display: inline-flex;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.body-container{
+    padding: 4%;
+    display: flex;
+    align-items: center;
+}
+
+.login-container, .register-container{
+    width: 50%;
+}
+
+.login-container h1, .register-container h1{
+    font-family: 'Roboto Condensed';
+    font-size: 50px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.login-container p{
+    font-family: 'Raleway';
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.login-container p a{
+    font-weight: bold;
+}
+
+.login-form, .register-form{
+    display: flex;
+    justify-content: center;
+    padding: 2% 1%;
+}
+
+.login-form form, .register-form form{
+    width: 100%;
+    padding: 1% 20%;
+}
+
+.login-form input:nth-child(n):not(:last-child), .register-form input:nth-child(n):not(:last-child){
+    display: block;
+    width: -webkit-fill-available;
+    padding: 3% 4%;
+    margin: 3% 0%;
+    border: 2px solid black;
+    border-radius: 3px;
+}
+::-webkit-input-placeholder{
+    font-family: 'Raleway';
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 1% 3%;
+}
+
+.login-form input[type='submit'], .register-form input[type='submit']{
+    background: black;
+    border: 3px solid black;
+    padding: 2% 5%;
+    text-transform: uppercase;
+    font-family: 'Roboto Condensed';
+    letter-spacing: 5px;
+    color: white;
+    width: inherit;
+    cursor: pointer;
+}
+
+.login-form input[type='submit']:hover, .register-form input[type='submit']:hover{
+    background: white;
+    color: black;
+}
+
+h2 {
+    width: 50%; 
+    text-align: center; 
+    border-bottom: 1px solid #000; 
+    line-height: 0.1em;
+    margin: 1% 25%;
+    font-family: 'Roboto Condensed';
+} 
+ 
+h2 span { 
+    background:#fff; 
+    padding:0 10px; 
+}
+
+.social-icons{
+    padding: 5%;
+    justify-self: center;
+    text-align: center;
+}
+
+.social-icons span{
+    background: black;
+    padding: 2% 5%;
+    color: white;
+    cursor: pointer;
+    border: 3px solid black;
+    margin: 0% 3%;
+}
+
+.social-icons span:hover{
+    background: white;
+    color: black;
+}
+
+input[type="text"], input[type="email"]{
+    font-family: 'Raleway';
+    letter-spacing: 2px;
+}
+
+@media(max-width:1000px){
+    .login-container{
+        width: 100%;
+    }
+
+    .register-container{
+        width: 100%;
+    }
+
+    .body-container{
+        display: block;
+    }
+}

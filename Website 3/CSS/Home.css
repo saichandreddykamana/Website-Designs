@@ -44,8 +44,26 @@ nav .nav-menu li:nth-child(n + 2){
     cursor: pointer;
 }
 
-nav .nav-menu li:nth-child(n + 2):hover, .menu-list li:hover{
+.menu:hover, .menu-list li:hover{
     background: rgb(235, 234, 234);
+}
+
+nav li a{
+    background: black;
+    border: none;
+    padding: 15% 40%;
+    font-family: 'Roboto Condensed';
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    cursor: pointer;
+    border: 2px solid black;
+    text-decoration: none;
+}
+
+nav li a:hover{
+    background: white;
+    color: black;
 }
 
 .menu-list li:hover{
@@ -291,9 +309,6 @@ nav .nav-menu li:nth-child(n + 2):hover, .menu-list li:hover{
 
 .left-arrow i, .right-arrow i{
     font-size: 20px;
-}
-
-.footer-container{
 }
 
 .sub-footer-one{

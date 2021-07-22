@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="../CSS/Login.css">
+    <title>Login</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>
+                <img src="../Images/logo.png" alt="Website Logo">
+            </li>
+            <li>
+                <a href="../HTML/Home.html"> Home </a></li>
+            <li>Contact</li>
+            <li>About</li>
+            <li>
+                <button>
+                    <i class="fas fa-shopping-cart"></i> 0 
+                </button>
+            </li>
+        </ul>
+    </nav>
+    <div class="body-container">
+        <div class="login-container">
+            <h1>Login</h1>
+            <div class="login-form">
+                <form action="" method="post">
+                    <input type="email" name="email" id="email" placeholder="E-Mail Address">
+                    <input type="password" name="password" id="password" placeholder="Password">
+                    <input type="submit" value="login" name="login-submit">
+                </form>
+            </div>
+            <p>Forgot Password? <a href=""> Click here</a></p>
+        </div>
+        <div class="register-container">
+           <h1>Register</h1>
+           <div class="register-form">
+               <form action="" method="post">
+                    <input type="text" name="full_name" id="full_name" placeholder="Full Name">
+                    <input type="email" name="new-email" id="new-email" placeholder="E-Mail Address">
+                    <input type="password" name="new-password" id="new-password" placeholder="Password">
+                    <input type="password" name="confirm-new-password" id="confirm-new-password" placeholder="Confirm Password">
+                    <input type="submit" value="register" name="register-submit">
+               </form>
+           </div>
+           <h2><span> OR </span></h2>
+           <div class="social-icons">
+               <span>
+                    <i class="fab fa-facebook-f"></i>
+               </span>
+               <span>
+                    <i class="fab fa-twitter"></i>
+               </span>
+               <span>
+                    <i class="fab fa-google-plus-g"></i>
+               </span>
+           </div>
+        </div>
+    </div>
+</body>
+</html>
