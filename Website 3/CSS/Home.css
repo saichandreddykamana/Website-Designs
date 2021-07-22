@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Nunito:wght@300&family=Roboto+Condensed:wght@700&family=Roboto+Slab:wght@300;500&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 200vh;
+}
+
+nav{
+    position: fixed;
+    width: 100%;
+    margin: 0;
+    top: 0;
+    border-bottom: 1px solid #f7f1f1;
+}
+
+.nav-hamburger-menu{    
+    padding: 1.5% 3%;
+    background: white;
+    cursor: pointer;
+    float: left;
+    display: none;
+}
+
+.nav-hamburger-menu i{
+    font-size: 25px;
+}
+
+nav .nav-menu{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    margin: 0;
+    background: white;
+}
+
+nav .nav-menu li:nth-child(n + 2){
+    padding: 1% 5%;
+    font-family: 'Raleway';
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+nav .nav-menu li:nth-child(n + 2):hover, .menu-list li:hover{
+    background: rgb(235, 234, 234);
+}
+
+.menu-list li:hover{
+    font-weight: bold;
+}
+
+.menu-list{
+    list-style: none;
+    width: inherit;
+    display: none;
+    flex-wrap: wrap;
+    background: white;    
+    padding: 0;
+    margin: 0;
+}
+
+.menu-list li{
+    padding: 1% 5%;
+    font-family: 'Raleway';
+    cursor: pointer;
+    margin: 1%;
+    font-size: 14px;
+}
+
+.container{
+    display: flex;
+    height: inherit;
+}
+
+.close{
+    float: right;
+    cursor: pointer;
+    padding: 8%;
+    font-size: 25px;
+}
+
+.side-menu{
+    display: none;
+    background: rgb(241, 241, 241, 0.46);
+    width: 250px;
+    height: inherit;
+}
+
+.side-menu ul{
+    width: inherit;
+    float: left;
+    list-style: none;
+    padding: 0;
+}
+
+.side-menu ul li{
+    padding: 5% 6%;
+    font-family: 'Raleway';
+    cursor: pointer;
+    margin: 2%;
+}
+
+.side-menu ul li:hover{
+    background: rgb(224, 224, 224, 0.4);
+    font-weight: bold;
+}
+
+.body-container{
+    height: inherit;
+    padding-top: 5%;
+}
+
+.slide-in{
+    animation: slideDown 300ms ease-in-out forwards;
+    transform-origin: top center;
+}
+
+.slide-right{
+    position: absolute;
+    left: -150px;
+    background: rgb(246, 246, 246);
+    -webkit-animation: slideRight 0.5s forwards;
+    animation: slideRight 0.5s forwards;
+}
+
+@keyframes slideRight {
+    100% { 
+        left: 0; 
+    }
+}
+
+@keyframes slideDown {
+    0% {
+      transform: scaleY(0)
+    }
+    80% {
+      transform: scaleY(1.1)
+    }
+    100% {
+      transform: scaleY(1)
+    }
+}
