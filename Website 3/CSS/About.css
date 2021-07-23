@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&family=Noto+Sans&family=Poppins:wght@300&family=Source+Sans+Pro:ital,wght@1,300&family=Open+Sans&family=Raleway&family=Nunito:wght@300&family=Roboto+Condensed:wght@700&family=Roboto+Slab:wght@300;500&display=swap');
+
+html { 
+    height:100%;
+}
+
+body { 
+    min-height:100%;
+    margin: 0;
+    padding: 0;
+}
+
+.body-container{
+    padding: 2% 5%;
+    display: block;
+}
+
+h1{
+    font-family: 'Raleway';
+    font-size: 40px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.about-container{
+    display: flex;
+}
+
+.social-container{
+    width: 40%;
+    padding: 0% 5%;
+}
+
+.about-description{
+    width: -webkit-fill-available;
+}
+
+.about-container p{
+    text-align: justify;
+    line-height: 30px;
+    font-family: 'Raleway';
+}
+
+.about-container h2{
+    text-align: center;
+    margin: 0;
+    font-size: 28px;
+    font-family: 'Roboto Condensed';
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.social-icons{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.social-icons p{
+    padding: 4% 8%;
+    margin: 4%;
+    background: black;
+    cursor: pointer;
+    border: 2px solid black;
+    color: white;
+}
+
+.social-icons p:hover{
+    background: white;
+    color: black;
+}
+
+@media(max-width:1000px){
+    .about-container{
+        display: block;
+    }
+
+    .social-container{
+        width: 100%;
+    }
+
+    .social-icons p{
+        padding: 2% 4%;
+    }
+}
