@@ -33,22 +33,10 @@ nav ul li:nth-child(n + 2){
     cursor: pointer;
 }
 
-nav ul li:nth-child(n + 2):not(:last-child):hover{
+nav ul li:nth-child(n + 2):hover{
     background: rgb(235, 234, 234);
 }
 
-nav ul li button{
-    background: black;
-    border : 2px solid black;
-    color: white;
-    font-family: 'Roboto Condensed';
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    padding: 15% 50%;
-    cursor: pointer;
-    font-size: 18px;
-    display: inline-flex;
-}
 
 a{
     text-decoration: none;
@@ -178,6 +166,10 @@ input[type="text"], input[type="email"]{
     }
 
     .body-container{
+        display: block;
+    }
+
+    nav ul{
         display: block;
     }
 }
