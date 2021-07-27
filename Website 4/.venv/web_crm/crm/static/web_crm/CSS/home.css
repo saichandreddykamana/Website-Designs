@@ -1,4 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@500&family=Lato&family=Lexend:wght@500;800&family=Montserrat:wght@500&family=Noto+Sans+JP&family=Oswald:wght@700&family=PT+Sans&family=Rubik&family=Ubuntu&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
 body{
-    background: black;
+    margin: 0;
+}
+
+.nav{
+    height: 80px;
+    width: 100%;
+    background: white;
+    position: fixed;
+}
+
+.nav > .nav-header{
+    display: inline;
+}
+
+.logo{
+    font-size: 30px;
+    color: black;
+    display: inline-flex;
+    padding: 15px 50px;
+    font-family: 'oswald';
+    letter-spacing: 5px;
+}
+
+#nav-checkbox{
+    display: none;
+}
+
+.nav-btn{
+    display: none;
+    float: right;
+}
+
+.nav-btn > i{
+    font-size: 30px;
+    color: black;
+    padding: 30px;
+    cursor: pointer;
+}
+
+#menu-cancel{
+    display: none;
+    text-align: right;
+    font-size: 23px;
+    cursor: pointer;
+}
+
+.nav-links{
+    float: right;
+    display: inline-flex;
+    height: inherit;
+    align-items: center;
+    margin: 0px 10px;
+}
+
+.nav-links > a{
+    color: black;
+    text-decoration: none;
+    padding: 10px 30px;
+    margin: 0px 10px;
+    font-family: 'Dosis';
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.nav-links > a:hover{
+    background: rgb(241, 241, 241);
+    color: black;
+}
+
+#login-btn{
+    background: rgba(16, 138, 158, 1);
     color: white;
+}
+
+#register-btn{
+    background: rgba(0, 178, 71, 1);
+    color: white;
+}
+
+#login-btn:hover{
+    background: rgba(16, 138, 158, 0.5);
+}
+
+#register-btn:hover{
+    background: rgba(0, 178, 71, 0.5);
+}
+
+.heading-container{
+    display: inline-flex;
+    padding: 80px 5px;
+    width: 100%;
+}
+
+.heading, .header-image{
+    height: inherit;
+}
+
+.header-image{
+    width: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-image > img{
+    width: 100%;
+}
+
+.heading{
+    padding: 10px 50px;
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+
+.heading > div > h1{
+    font-family: 'Lexend';
+    font-size: 45px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.heading > div > p, .features-container > p, .features > div > p{
+    font-family: 'Lato';
+    word-spacing: 6px;
+}
+
+.heading > div > #sign-up-btn{
+    margin: 30px 0px;
+    background: rgba(0, 178, 71, 1);
+    padding: 10px 50px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-family: 'Lexend';
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 3px;
+    float: right;
+}
+
+.heading > div > #sign-up-btn:hover{
+    background: rgba(0, 178, 71, 0.7);
+}
+
+.heading > div > h1 > span:nth-child(1){
+    color: rgba(16, 138, 158, 1);
+}
+
+.heading > div > h1 > span:nth-child(2){
+    color: rgba(0, 178, 71, 1);
+}
+
+.features-container > h2{
+    font-family: 'Lexend';
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.features-container{
+    text-align: center;
+}
+
+.features{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.features > div{
+    width: 350px;
+    padding: 2%;
+    margin: 1%;
+    background: #dfdfdf7a;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.features > div > h3{
+    font-family: 'Lexend';
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.features > div > p{
+    text-align: justify;
+}
+
+.features > div > i{
+    font-size: 30px;
+}
+
+#nav-checkbox:checked ~ .nav-links{
+    display: grid;
+    float: right;
+    margin: 60px 60px 0px 0px;
+    background: white;
+    padding: 20px;
+    border: 1px solid lightgray;
+    height: fit-content;
+    border-radius: 5px;
+    transition: top 0.3s;
+}
+
+#nav-checkbox:checked ~ .nav-links > a{
+    margin: 4px;
+}
+
+#nav-checkbox:checked ~ .nav-btn{
+
+}
+
+@media(max-width:900px){
+    .heading-container{
+        display: block;
+    }
+
+    .heading, .header-image{
+        width: 100%;
+    }
+
+    .nav-links{
+        display: none;
+    }
+
+    .nav-btn{
+        display: block;
+    }
+}
+
+@media(max-width:1000px){
+    .heading > div > h1{
+        font-size: 30px;
+    }
 }
