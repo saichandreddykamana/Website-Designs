@@ -1,0 +1,50 @@
+{% extends 'navbar.html' %}
+{% block title %} Login {% endblock %}
+{% block content %}
+<div class="login-container">
+    <div>
+        <div class="login-heading">
+            <h1>To use CRM features login or register here.</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur repellendus laboriosam a asperiores rem! Est eligendi sed ut ipsum velit nobis, rem reiciendis, suscipit impedit ullam molestias veritatis omnis sint voluptatibus recusandae exercitationem perspiciatis. Eaque mollitia totam veniam aut saepe.</p>
+        </div>
+        <div class="login-body">
+                <form action="" method="POST" class="login-form">
+                    <div>
+                        <h2>Login</h2>
+                        <div>
+                            <input type="email" name="email" id="email" placeholder="E-Mail Addresss" class="form-input">
+                            <input type="password" name="password" id="password" placeholder="Password" class="form-input">
+                        </div>
+                        <input type="submit" value="Login" id="login" name="login">
+                    </div>
+                </form>
+                <form action="" method="POST" class="register-form">
+                    <div>
+                        <h2>Register Using Social Media</h2>
+                        <div class="social-container">
+                            <i class="fab fa-twitter"></i>
+                            <i class="fab fa-google-plus-g"></i>
+                            <i class="fab fa-linkedin-in"></i>
+                        </div>
+                    </div>
+                    <h3><span>or</span></h3>
+                    <div>
+                        <div>
+                            <input type="text" name="first_name" id="first_name" placeholder="First Name">
+                            <input type="text" name="last_name" id="last_name" placeholder="Last Name"> 
+                        </div>
+                        <div>
+                            <input type="email" name="mail" id="mail" placeholder="E-Mail Address">
+                            <input type="tel" name="phone" id="phone" placeholder="Phone Number">
+                        </div>
+                        <div>
+                            <input type="password" name="new_password" id="new_password" placeholder="Password">
+                            <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password">
+                        </div>
+                        <input type="submit" value="Register" id='register' name="register">
+                    </div>
+                </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

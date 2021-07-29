@@ -10,7 +10,7 @@ try{
 
     $(window).scroll(function () {
     if($(window).scrollTop() > 0){
-        $('.nav').css('background', 'rgb(0 0 0 / 10%)');
+        $('.nav').css('background', 'white');
         $('.nav-links a').css('color', 'black');
     }else{
         $('.nav').css('background', 'white');
@@ -43,6 +43,26 @@ function nav_func(){
     }
 }
 
-}catch(err){
-    alert(err);
+function requestDemo(){
+    try{
+        var email = document.getElementById('demo-mail').value;
+        $.ajax({
+            url: 'demo',
+            type: 'POST',
+            data: {
+                csrfmiddlewaretoken: document.getElementsByName('csrfmiddlewaretoken')[0].value,
+                email: email,
+            },
+            success: function(response){
+                var message = response.data.message;
+                if(message.toString() === 'success'){
+                    document.getElementById('demo-btn').disabled = true;
+                    document.getElementById('demo-btn').style.cursor = 'no-drop';
+                    document.getElementById('demo-btn').innerText = 'Demo Requested';
+                    document.getElementById('demo-btn').style.background = 'red';
+                }
+            }
+        });
+    }catch(err){}
 }
+}catch(err){}
