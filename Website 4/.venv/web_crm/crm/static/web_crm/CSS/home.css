@@ -280,6 +280,17 @@ body{
     background: rgba(0, 178, 71, 0.7);
 }
 
+#error_msg{
+    display: none;
+    background: red;
+    color: white;
+    font-family: 'Dosis';
+    font-size: 14px;
+    padding: 15px;
+    text-align: center;
+    border-radius: 4px;
+}
+
 .demo-container h2{
     width: 80%;
     font-family: 'Lexend';

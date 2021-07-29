@@ -60,6 +60,11 @@ function requestDemo(){
                     document.getElementById('demo-btn').style.cursor = 'no-drop';
                     document.getElementById('demo-btn').innerText = 'Demo Requested';
                     document.getElementById('demo-btn').style.background = 'red';
+                    document.getElementById('error_msg').style.display = 'none';
+                }
+                if(message.toString() === 'Not success'){
+                    document.getElementById('error_msg').innerText = 'Please enter valid e-mail address.';
+                    document.getElementById('error_msg').style.display = 'block';
                 }
             }
         });
