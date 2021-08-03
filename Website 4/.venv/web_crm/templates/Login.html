@@ -7,8 +7,16 @@
             <h1>To use CRM features login or register here.</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur repellendus laboriosam a asperiores rem! Est eligendi sed ut ipsum velit nobis, rem reiciendis, suscipit impedit ullam molestias veritatis omnis sint voluptatibus recusandae exercitationem perspiciatis. Eaque mollitia totam veniam aut saepe.</p>
         </div>
+        {% if messages|length > 0 %}
+            <p class="login-error-msg">
+                {% for msg in messages %}
+                    {{msg}}
+                {% endfor %}
+            </p>
+        {% endif %}
         <div class="login-body">
-                <form action="" method="POST" class="login-form">
+                <form action="/login/" method="POST" class="login-form">
+                    {% csrf_token %}
                     <div>
                         <h2>Login</h2>
                         <div>
@@ -18,15 +26,16 @@
                         <input type="submit" value="Login" id="login" name="login">
                     </div>
                 </form>
-                <form action="" method="POST" class="register-form">
+                <form action="/register/" method="POST" class="register-form">
+                    {% csrf_token %}
                     <div>
-                        <h2>Register Using Social Media</h2>
-                        <div class="social-container">
-                            <i class="fab fa-twitter"></i>
-                            <i class="fab fa-google-plus-g"></i>
-                            <i class="fab fa-linkedin-in"></i>
+                        <h2>Register</h2>
+                        <div style="width: inherit;">
+                            <a href="{% url 'social:begin' 'google-oauth2' %}">
+                                <i class="fab fa-google-plus-g"></i>  Register with Google
+                            </a>
                         </div>
-                    </div>
+                    </div> 
                     <h3><span>or</span></h3>
                     <div>
                         <div>

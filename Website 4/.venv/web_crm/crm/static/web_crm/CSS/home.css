@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@500&family=Lato&family=Lexend:wght@500;800&family=Montserrat:wght@500&family=Noto+Sans+JP&family=Oswald:wght@700&family=PT+Sans&family=Rubik&family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@500&family=Lato&family=Montserrat:wght@200&family=Lexend:wght@500;800&family=Montserrat:wght@500&family=Noto+Sans+JP&family=Oswald:wght@700&family=PT+Sans&family=Rubik&family=Ubuntu&family=Open+Sans+Condensed:wght@300&display=swap');
 
 *{
     box-sizing: border-box;
@@ -291,6 +291,18 @@ body{
     border-radius: 4px;
 }
 
+.login-error-msg{
+    background: red;
+    color: white;
+    font-family: 'Dosis';
+    font-size: 14px;
+    padding: 15px;
+    text-align: center;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
 .demo-container h2{
     width: 80%;
     font-family: 'Lexend';
@@ -359,7 +371,10 @@ body{
 }
 
 .login-heading > p{
-    font-family: 'PT Sans';
+    font-family: 'Open Sans Condensed';
+    font-weight: 300;
+    font-size: 19px;
+    letter-spacing: 1px;
 }
 
 .login-body{
@@ -368,116 +383,85 @@ body{
     width: 100%;
 }
 
-.login-form, .register-form{
-    width: 50%;
-}
-
-.login-form div, .register-form div{
-    width: -webkit-fill-available;
-    text-align: center;
-}
-
-.login-form > div > div, .register-form > div > div{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0px 20px;
-} 
-
-.login-form input:not([type='submit']), .register-form input:not([type='submit']){
-    border: 1px solid #f1f1f1;
-    border-radius: 2px;
-    background: #f1f1f1;
-    outline: 0;
-    font-size: 15px;
-    color: black;
-    padding: 7px 20px;
-    transition: border-color 0.2s;
+.login-form > div, .register-form > div{
+    padding: 5px 100px;
     width: 100%;
-    margin: 1%;
 }
 
-.login-form input:not([type='submit']):focus{
-    border: 3px solid rgba(16, 138, 158, 1);
-}
-
-.register-form input:not([type='submit']):focus{
-    border: 3px solid rgba(0, 178, 71, 1);
-}
-
-.login-form input[type= 'submit'], .register-form input[type= 'submit']{
-    padding: 10px 80px;
-    color: white;
-    border: none;
-    border-radius: 2px;
-    font-family: 'Dosis';
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    font-size: 14px;
-    cursor: pointer;
-    margin: 2% 0%;
-}
-
-.login-form input[type='submit']{
-    background: rgba(16, 138, 158, 1);
-}
-
-.register-form input[type='submit']{
-    background: rgba(0, 178, 71, 1);
-}
-
-::-webkit-input-placeholder{
-    color: thistle;
-    font-family: 'Dosis';
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}
-
-.social-container{
-    padding: 10px;
-    margin: 10px;
-}
-
-.register-form h2, .login-form h2{
-    font-family: 'Dosis';
-    padding: 0;
-    margin: 0;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-}
-.login-form h2{
-    margin: 10px;
+.login-form > div > div > input{
+    padding: 7px 30px;
+    margin: 5px 40px;
 }
 
 .register-form h3{
-    text-align: center;
+    padding: 0;
+    margin: 10px;
     font-family: 'Dosis';
-}
-
-.social-container i{
     font-size: 20px;
-    padding: 7px 15px;
-    border-radius: 2px;
-    margin: 0px 10px;
+    text-transform: uppercase;
+}
+
+.register-form input:not([type='submit']){
+    padding: 7px 30px;
+    margin: 5px;
+    width: -webkit-fill-available;
+}
+
+.register-form > div > div{
+    display: flex;
+} 
+
+.login-form, .register-form{
+    width: 50%;
+    text-align: center;
+}
+
+.register-form > div > div > a{
+    background: black;
+    padding: 10px 10%;
     color: white;
+    text-decoration: none;   
+    margin: 0px;
+    text-transform: uppercase;
+    font-family: 'Open Sans Condensed';
+    letter-spacing: 3px;    
+    width: inherit;
+}
+
+.register-form > div > div > a > i{
+    padding: 0px 10px;
+}
+
+.login-form h2, .register-form h2{
+    font-family: 'Dosis';
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 30px;
+}
+
+.login-form > div > div{
+    display: grid;
+}
+
+.login-form > div > input[type='submit'], .register-form input[type='submit']{
+    border: none;
+    background: black;
+    color: white;
+    padding: 10px 60px;
     cursor: pointer;
+    font-family: 'Dosis';
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: bold;
+    border-radius: 50px;
+    margin: 20px 60px;
 }
 
-.fa-twitter{
-    background: #00ACEE;
+.login-form > div > input[type='submit']:hover, .register-form input[type='submit']:hover, .register-form a:hover{
+    background: #000000d1;
 }
 
-.fa-twitter:hover, .fa-linkedin-in:hover, .fa-google-plus-g:hover, #login:hover, #register:hover{
-    opacity: 0.7;
-}
 
-.fa-linkedin-in{
-    background: #0E76A8;
-}
-
-.fa-google-plus-g{
-    background: #db3236;
-}
 
 @media(max-width:900px){
     .heading-container{
@@ -508,15 +492,7 @@ body{
         width: 100%;
     }
 
-    .login-heading > h1{
-        font-size: 30px;
-    }
-
-    .login-body{
-        display: block;
-    }
-
-    .login-form, .register-form{
+    .login-form{
         width: 100%;
     }
 }
