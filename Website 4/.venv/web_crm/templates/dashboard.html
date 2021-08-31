@@ -3,14 +3,171 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'web_crm/CSS/dashboard.css' %}"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <title>Dashboard</title>
 </head>
 <body>
-    <h1>Welcome to Dashboard</h1>
-    <form action="/log_out/" method="POST">
-      {% csrf_token %}
-      <input type="submit" value="Logout">
-    </form>
+    <div class="dashboard-container">
+      <div id="navbar" class="side-nav">
+        <nav>
+          <ul>
+            <li>
+              <i class="fas fa-home" title="Home"></i> <span class="nav-description">Home</span>
+            </li>
+            <li>
+              <i class="fas fa-tachometer-alt" title="Dashboard"></i> <span class="nav-description"> Dashboard </span>
+            </li>
+            <li>
+              <i class="fas fa-users" title="Customers"></i> <span class="nav-description">Customers</span>
+            </li>
+            <li>
+              <i class="fas fa-file-invoice" title="Receipts"></i> <span class="nav-description"> Receipts </span> 
+            </li>
+            <li>
+              <span>
+                <form action="/log_out/" method="POST">
+                  {% csrf_token %}
+                  <button id="logout" type="submit" ><i class="fas fa-sign-out-alt" title="Logout"></i> <span class="nav-description"> Logout</span></button>
+                </form>
+              </span>
+            </li>
+            <li class="nav-expand-btn">
+              <i id="right" class="fas fa-arrow-right" title="Show Login Page"></i>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="side-container">
+        <div class="first_widget">
+          <div class="pie_chart">
+            <div id="donutchart" style="width: 400px; height: 300px;"></div>
+          </div>
+          <div class="table_container" style="overflow: scroll;">
+            <table>
+              <tr class="info-header">
+                <td>Month</td>
+                <td>Total</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>August</td>
+                <td>$350</td>
+                <td><button>View Details</button></td>
+              </tr> 
+              <tr>
+                <td>August</td>
+                <td>$350</td>
+                <td><button>View Details</button></td>
+              </tr>
+              <tr>
+                <td>August</td>
+                <td>$350</td>
+                <td><button>View Details</button></td>
+              </tr>
+              <tr>
+                <td>August</td>
+                <td>$350</td>
+                <td><button>View Details</button></td>
+              </tr>
+              <tr>
+                <td>August</td>
+                <td>$350</td>
+                <td><button>View Details</button></td>
+              </tr>
+              <tr>
+                <td>August</td>
+                <td>$350</td>
+                <td><button>View Details</button></td>
+              </tr>
+              <tr>
+                <td>August</td>
+                <td>$350</td>
+                <td><button>View Details</button></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="second_widget">
+          <div class="grid">
+            <div class="col-md-3">
+              <b> Sai Chand Reddy </b>
+              <div>
+                <b> 28 - Aug - 2021/ 12:30 PM </b>
+                <b>Short Trim</b>
+              </div>
+              <button class="edit_appointment"><i class="fas fa-edit"></i> Edit Appointment</button>
+            </div>
+            <div class="col-md-3">
+              <b> Manoj Reddy </b>
+              <div>
+                <b> 28 - Aug - 2021/ 12:30 PM </b>
+                <b>Short Trim</b>
+              </div>
+              <button class="edit_appointment"><i class="fas fa-edit"></i> Edit Appointment</button>
+            </div>
+            <div class="col-md-3">
+              <b> Subba Reddy </b>
+              <div>
+                <b> 28 - Aug - 2021/ 12:30 PM </b>
+                <b>Short Trim</b>
+              </div>
+              <button class="edit_appointment"><i class="fas fa-edit"></i> Edit Appointment</button>
+            </div>
+            <div class="col-md-3">
+              <b> Suguna Reddy </b>
+              <div>
+                <b> 28 - Aug - 2021/ 12:30 PM </b>
+                <b>Short Trim</b>
+              </div>
+              <button class="edit_appointment"><i class="fas fa-edit"></i> Edit Appointment</button>
+            </div>
+          </div>
+        </div>
+        <div class="third_widget">
+          <div class="row">
+            <div class="col-md-12">
+              <p>Mail from Sai Chand Reddy Kamana</p>
+              <div>
+                <button class="view_mail"><i class="fas fa-envelope-open-text"></i>View Mail</button>
+                <button class="delete_mail"><i class="far fa-trash-alt"></i>Delete</button>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <p>Mail from Manoj Reddy Kamana</p>
+              <div>
+                <button class="view_mail"><i class="fas fa-envelope-open-text"></i>View Mail</button>
+                <button class="delete_mail"><i class="far fa-trash-alt"></i>Delete</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 </body>
+
+<script type="text/javascript" src="{% static 'web_crm/JS/dashboard.js' %}"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Money'],
+          ['Expenses', 70],
+          ['Savings', 60]
+        ]);
+
+        var options = {
+          title: 'Hair Salon Expensed and Savings ',
+          pieHole: 0.4,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+        chart.draw(data, options);
+      }
+    </script>
 </html>

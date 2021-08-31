@@ -7,18 +7,10 @@
             <h1>To use CRM features login or register here.</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur repellendus laboriosam a asperiores rem! Est eligendi sed ut ipsum velit nobis, rem reiciendis, suscipit impedit ullam molestias veritatis omnis sint voluptatibus recusandae exercitationem perspiciatis. Eaque mollitia totam veniam aut saepe.</p>
         </div>
-        {% if messages|length > 0 %}
-            <p class="login-error-msg">
-                {% for msg in messages %}
-                    {{msg}}
-                {% endfor %}
-            </p>
-        {% endif %}
         <div class="login-body">
                 <form action="/login/" method="POST" class="login-form">
                     {% csrf_token %}
                     <div>
-                        <h2>Login</h2>
                         <div>
                             <input type="email" name="email" id="email" placeholder="E-Mail Addresss" class="form-input">
                             <input type="password" name="password" id="password" placeholder="Password" class="form-input">
@@ -29,7 +21,6 @@
                 <form action="/register/" method="POST" class="register-form">
                     {% csrf_token %}
                     <div>
-                        <h2>Register</h2>
                         <div style="width: inherit;">
                             <a href="{% url 'social:begin' 'google-oauth2' %}">
                                 <i class="fab fa-google-plus-g"></i>  Register with Google
@@ -54,6 +45,13 @@
                     </div>
                 </form>
         </div>
+        {% if messages|length > 0 %}
+            <p class="login-error-msg">
+                {% for msg in messages %}
+                    {{msg}}
+                {% endfor %}
+            </p>
+        {% endif %}
     </div>
 </div>
 {% endblock %}

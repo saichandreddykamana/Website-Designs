@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@500&family=Lato&family=Montserrat:wght@200&family=Lexend:wght@500;800&family=Montserrat:wght@500&family=Noto+Sans+JP&family=Oswald:wght@700&family=PT+Sans&family=Rubik&family=Ubuntu&family=Open+Sans+Condensed:wght@300&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body, nav, ul, li{
+    margin: 0;
+    padding: 0;
+}
+
+.dashboard-container{
+    width: 100%;
+    display: flex;
+    height: 100vh;
+}
+
+.side-nav{
+    width: 5%;
+    background: black;
+    color: white;
+    cursor: pointer;
+}
+
+.nav-description{
+    display: none;
+    padding: 0px 10px;
+    font-family: 'Dosis';
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.side-nav > nav{
+    padding: 150px 0px;
+}
+
+.side-nav > nav > ul{
+    padding: 0px;
+}
+
+.side-nav > nav > ul > li{
+    padding: 22px;
+    text-align: center;
+}
+
+.side-nav > nav > ul > li:hover{
+    background: rgb(41, 41, 41);
+}
+
+.nav-expand-btn{
+    position: fixed;
+    bottom: 0;
+    width: 5%;
+    text-align: center;
+}
+
+#logout{
+    background: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+}
+
+#logout > i{
+    font-size: 19px;
+}
+
+.nav-logout{
+    margin-left: 10px;
+}
+
+.side-container{
+    width: 85%;
+}
+
+.first_widget{
+    padding: 10px;
+    display: flex;
+    height: 400px;
+}
+
+.table{
+    margin: 20px;
+    width: -webkit-fill-available;
+}
+
+.info-header > td{
+    font-weight: bold;
+    color: black;
+}
+
+tr > td{
+    padding: 10px 50px;
+    font-family: 'Dosis';
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #ababab;
+}
+tr > td > button{
+    background: orangered;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Dosis';
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: white;
+    padding: 5px 30px;
+    font-size: 12px;
+}
+
+tr > td > button:hover{
+    background: rgb(255, 51, 0);
+}
+
+.pie_chart, .table_container{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.table_container{
+    width: 50%;
+}
+
+.pie_chart{
+    width: 35%;
+}
+
+.grid{
+    display: flex;
+}
+
+.col-md-3{
+    width: 310px;
+    background: lightgreen;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 4px;
+    display: grid;
+    font-family: 'Dosis';
+}
+
+.col-md-3 > div > b{
+    font-size: 11px;
+}
+
+.col-md-3 > div > b:nth-child(1){
+    float: right;
+}
+
+.edit_appointment{ 
+    width: fit-content;
+    margin: 10px 0px;
+    cursor: pointer;
+    background: black;
+    color: white;
+    font-family: 'Dosis';
+    letter-spacing: 3px;
+    border: none;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    border-radius: 2px;
+}
+
+.edit_appointment:hover, .third_widget > .row > .col-md-12 > div > button:hover{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.third_widget > .row{
+    display: block;
+}
+
+.third_widget > .row > .col-md-12{
+    padding: 10px;
+    margin: 10px;
+    background: rgb(236, 236, 236);
+    border-radius: 4px;
+    font-family: 'Dosis';
+    display: flex;
+}
+
+.third_widget > .row > .col-md-12 > p{
+    width: 75%;
+}
+
+.third_widget > .row > .col-md-12 > div{
+    display: flex;
+}
+
+.third_widget > .row > .col-md-12 > div > button{
+    margin: 10px;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 2px;
+    color: white;
+    font-family: 'Dosis';
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+.third_widget > .row > .col-md-12 > div > button > i{
+    padding: 0px 5px;
+}
+
+.view_mail{
+    background: black;
+}
+
+.delete_mail{
+    background: rgb(209, 43, 43);
+}
