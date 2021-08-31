@@ -70,10 +70,6 @@ body, nav, ul, li{
     margin-left: 10px;
 }
 
-.side-container{
-    width: 85%;
-}
-
 .first_widget{
     padding: 10px;
     display: flex;
