@@ -1,16 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bakbak+One&family=Barlow+Condensed&family=Bebas+Neue&family=Fredericka+the+Great&family=Heebo&family=Mulish&family=Open+Sans+Condensed:ital,wght@1,300&family=Patua+One&family=Righteous&family=Yanone+Kaffeesatz:wght@500&family=Zilla+Slab+Highlight:wght@700&display=swap');
+
 body{
-	background: black;
-	color: white;
+	padding: 0;
+	margin: 0;    
+	box-sizing: border-box;
+	font-family: "Barlow Condensed";
 }
 
-h1{
-	text-align: center;
-	padding: 10px;
+body a{
+	text-decoration: none;
+	cursor: pointer;
+	color: black;
+	padding: 10px 30px;
 }
 
-p{
+body a:hover{
+	color: black;
+	background-color: rgb(247, 247, 247);
+	border-radius: 3px;
+}
+
+.navbar{
+	padding: 25px 10px;
+	background-color: white;
+}
+
+.navbar ul{
+	list-style: none;
+    display: contents;
+    padding: 10px;
+    align-items: center;
+    margin: 0px;
+}
+
+.navbar ul li{
+	padding: 10px 30px;
+}
+
+.navbar ul li a {
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+.logo{
+	float: left;
+}
+
+.register{
+	float: right;
+}
+
+.register-btn{
+	background-color: rgb(13, 72, 197);
+	border: none;
+	padding: 10px 35px;
 	color: white;
-	text-align: left;
+	border-radius: 3px;
+	text-transform: uppercase;
 	letter-spacing: 3px;
-	line-height: 2px;
+	font-weight: bold;
+	font-family: "Barlow Condensed";
+}
+
+.container{
+
+}
+
+.header-container{
+	display: flex;
+    align-items: center;
+	padding: 30px;
+}
+
+.heading h1{
+	font-family: 'Fredericka the Great', cursive;
+	font-size: 60px;
+}
+
+.heading p{
+	color: gray;
+}
+
+.see-examples-btn{
+	background-color: white;
+	border: 2px solid rgb(13, 72, 197);
+	border-radius: 2px;
+	padding: 8px 35px;
+	color: rgb(13, 72, 197);
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	font-weight: bold;
+	font-family: "Barlow Condensed";
+	margin: 0px 30px;
+}
+
+.heading-graphics img{
+	width: 700px;
+}
+
+.features-container{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.feature{
+	width: 380px;
+	background-color: #f6f6f68c;
+	padding: 20px;
+	margin: 20px;
+	border-radius: 5px;
+}
+
+.feature h2{
+	font-family: 'Yanone Kaffeesatz';
+}
+
+.feature p{
+	width: auto;
+	padding: 10px;
 }
