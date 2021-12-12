@@ -7,3 +7,10 @@ h1{
 	text-align: center;
 	padding: 10px;
 }
+
+p{
+	color: white;
+	text-align: left;
+	letter-spacing: 3px;
+	line-height: 2px;
+}
