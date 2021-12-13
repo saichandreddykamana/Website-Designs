@@ -80,7 +80,7 @@ body a:hover{
 	color: gray;
 }
 
-.see-examples-btn, .register-btn:hover{
+.sign-in, .see-examples-btn, .register-btn:hover{
 	background-color: white;
 	border: 2px solid rgb(13, 72, 197);
 	border-radius: 2px;
@@ -230,4 +230,89 @@ body a:hover{
 .footer-container ul li{
 	padding: 10px 50px;
 }
+ 
+.modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	padding-top: 100px; /* Location of the box */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
   
+  /* Modal Content */
+  .modal-content {
+	background-color: #fefefe;
+	margin: auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 25% !important;
+  }
+  
+  /* The Close Button */
+  .close {
+	color: #aaaaaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+  }
+
+  .form-container, .register-container{
+	  padding-bottom: 20px;
+  }
+
+  .form-container p{
+	  align-items: center;	
+	  font-family: "Barlow Condensed";
+	  margin: 10px 20px;
+	  letter-spacing: 1px;
+	  text-transform: uppercase;
+  }
+
+  .form-container h1, .register-container h1{
+	  text-align: center;
+	  padding: 20px 10px;
+	  text-align: center;
+	  font-size: 32px;
+	  font-family: 'Anton', Courier, monospace;
+	  text-transform: uppercase;
+	  letter-spacing: 5px;
+  }
+
+  .form-container input[type = 'text'], .form-container input[type = 'password'], .register-container input[type = 'text'], .register-container input[type = 'password']{
+	margin: 10px 20px;
+	padding: 3px 10px;
+	border: 1px solid lightgray;
+	width: 300px;
+  }
+
+  .form-container form input[type = 'submit'], .register-container form input[type = 'submit']{
+	  width: 200px;
+	  background-color: rgb(13, 72, 197);
+	  border: 2px solid rgb(13, 72, 197);
+	  padding: 3px 35px;
+	  color: white;
+	  border-radius: 3px;
+	  text-transform: uppercase;
+	  letter-spacing: 3px;
+	  font-weight: bold;
+	  font-family: "Barlow Condensed";
+  }
+
+  .form-container form input[type = 'submit']:hover, .register-container form input[type = 'submit']:hover{
+	background-color: white;
+	border: 2px solid rgb(13, 72, 197);
+	color: rgb(13, 72, 197);
+}
