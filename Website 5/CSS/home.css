@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bakbak+One&family=Barlow+Condensed&family=Bebas+Neue&family=Fredericka+the+Great&family=Heebo&family=Mulish&family=Open+Sans+Condensed:ital,wght@1,300&family=Patua+One&family=Righteous&family=Yanone+Kaffeesatz:wght@500&family=Zilla+Slab+Highlight:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bakbak+One&family=Barlow+Condensed&family=Bebas+Neue&family=Fredericka+the+Great&family=Heebo&family=Mulish&family=Open+Sans+Condensed:ital,wght@1,300&family=Patua+One&family=Righteous&family=Roboto+Slab:wght@300;400;500&family=Yanone+Kaffeesatz:wght@500&family=Zilla+Slab+Highlight:wght@700&display=swap');
+html {
+	scroll-behavior: smooth;
+}
 
 body{
 	padding: 0;
@@ -50,7 +53,7 @@ body a:hover{
 	float: right;
 }
 
-.register-btn{
+.register-btn, .see-examples-btn:hover{
 	background-color: rgb(13, 72, 197);
 	border: none;
 	padding: 10px 35px;
@@ -60,10 +63,6 @@ body a:hover{
 	letter-spacing: 3px;
 	font-weight: bold;
 	font-family: "Barlow Condensed";
-}
-
-.container{
-
 }
 
 .header-container{
@@ -81,7 +80,7 @@ body a:hover{
 	color: gray;
 }
 
-.see-examples-btn{
+.see-examples-btn, .register-btn:hover{
 	background-color: white;
 	border: 2px solid rgb(13, 72, 197);
 	border-radius: 2px;
@@ -91,6 +90,9 @@ body a:hover{
 	letter-spacing: 3px;
 	font-weight: bold;
 	font-family: "Barlow Condensed";
+}
+
+.see-examples-btn{
 	margin: 0px 30px;
 }
 
@@ -118,4 +120,114 @@ body a:hover{
 .feature p{
 	width: auto;
 	padding: 10px;
+	color: gray;
 }
+
+.feature:hover{
+	box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+	cursor: pointer;
+}
+
+.about-container{
+	display: flex;
+	width: 100%;
+	padding: 30px 5px;
+}
+
+.about-heading{
+	width: -webkit-fill-available;
+}
+
+.about-heading h1, .contact-form-div h1{
+	font-family: 'Anton', Courier, monospace;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+}
+.contact-form-div h1{
+	text-align: center;
+	font-size: 48px;
+}
+
+.about-heading h1{
+	text-align: right;
+	font-size: 60px;
+	padding: 5px 60px;
+}
+
+.about-heading p{
+	text-align: right;
+	padding: 10px 60px;
+	color: gray;
+}
+
+.about-image{
+	width: 30%;
+}
+
+.about-image img{
+	width: 400px;
+}
+
+.contact-form-div{
+	padding: 0px 0px 50px 0px;
+}
+
+.contact-form-div p{
+	text-align: center;
+	color: gray;
+}
+
+.contact-form-div form{
+	width: -webkit-fill-available;
+}
+
+.contact-form-div > form > input{
+	margin: 10px;
+	width: 23%;
+	padding: 5px 30px;
+	border: 1px solid rgb(180, 180, 180);
+	border-radius: 4px;
+}
+
+.contact-form-div > form > input:nth-last-child(1){
+	background-color: white;
+	border: 2px solid rgb(13, 72, 197);
+	border-radius: 2px;
+	padding: 8px 35px;
+	color: rgb(13, 72, 197);
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	font-weight: bold;
+	font-family: "Barlow Condensed";
+}
+
+.contact-form-div > form > input:nth-last-child(1):hover{
+	background-color: rgb(13, 72, 197);
+	border: 2px solid rgb(13, 72, 197);
+	color: white;
+	text-transform: uppercase;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+	font-family: "Barlow Condensed";
+	letter-spacing: 1px;
+	text-transform: uppercase;
+  }
+
+.footer-container{
+	position: absolute;
+	padding: 10px 50px;
+	width: 90%;
+}
+
+.footer-container ul{
+	display: flex;
+	list-style: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-container ul li{
+	padding: 10px 50px;
+}
+  
