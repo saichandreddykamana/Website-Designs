@@ -146,6 +146,7 @@ body a:hover{
 .contact-form-div h1{
 	text-align: center;
 	font-size: 48px;
+	color: white;
 }
 
 .about-heading h1{
@@ -169,12 +170,14 @@ body a:hover{
 }
 
 .contact-form-div{
-	padding: 0px 0px 50px 0px;
+	padding: 70px 50px;
+	background: rgb(13, 72, 197);
+	color: white;
 }
 
 .contact-form-div p{
 	text-align: center;
-	color: gray;
+	color: white;
 }
 
 .contact-form-div form{
@@ -190,11 +193,11 @@ body a:hover{
 }
 
 .contact-form-div > form > input:nth-last-child(1){
-	background-color: white;
-	border: 2px solid rgb(13, 72, 197);
+	background-color: black;
+	border: 2px solid black;
 	border-radius: 2px;
 	padding: 8px 35px;
-	color: rgb(13, 72, 197);
+	color: white;
 	text-transform: uppercase;
 	letter-spacing: 3px;
 	font-weight: bold;
@@ -202,9 +205,9 @@ body a:hover{
 }
 
 .contact-form-div > form > input:nth-last-child(1):hover{
-	background-color: rgb(13, 72, 197);
-	border: 2px solid rgb(13, 72, 197);
-	color: white;
+	background-color: white;
+	border: 2px solid black;
+	color: black;
 	text-transform: uppercase;
 }
 
@@ -218,6 +221,11 @@ body a:hover{
 	position: absolute;
 	padding: 10px 50px;
 	width: 90%;
+}
+
+.footer-container p {
+	padding: 3px;
+	margin: 3px;
 }
 
 .footer-container ul{
