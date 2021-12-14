@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bakbak+One&family=Barlow+Condensed&family=Bebas+Neue&family=Fredericka+the+Great&family=Heebo&family=Kaushan+Script&family=Mulish&family=Open+Sans+Condensed:ital,wght@1,300&family=Oswald&family=Patua+One&family=Righteous&family=Roboto+Slab:wght@300;400;500&family=Yanone+Kaffeesatz:wght@500&family=Zilla+Slab+Highlight:wght@700&display=swap');
+
+body{
+    padding: 0;
+    margin: 0;
+}
+
+.nav-container{
+    background-color: black;
+}
+
+.navbar{
+    margin: 0px 20px;
+    padding: 20px;
+}
+
+.navbar ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    width: 95%;
+    margin: 0px;
+    padding: 0;
+}
+
+.navbar ul li{
+    padding: 5px 30px;
+}
+
+.navbar ul:nth-last-child(1) li:hover{
+    background-color: rgb(126, 243, 9);
+    border-radius: 1px;
+}
+
+.navbar ul:nth-last-child(1) li:hover a{
+    color: black;
+}
+
+.navbar ul h1{
+    padding: 0;
+    margin: 0;
+    font-family: 'Kaushan Script';
+    font-size: 35px;
+    color: white;
+}
+
+.navbar span{
+    color: rgb(126, 243, 9);
+}
+
+.navbar ul a{
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-family: 'Bakbak One', cursive;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.navbar ul i{
+    font-size: 12px;
+    padding: 0px 1px;
+}
+
+.dropdown{
+    display: none;
+}
+
+.main-container{
+    padding: 30px 50px 80px 50px;
+    font-size: 20px;
+    display: flex;
+}
+
+.main-content{
+    width: 60%;
+    padding: 60px 10px;
+}
+
+.main-content form{
+    padding: 50px 0px 0px 0px;
+}
+
+.main-content h1{
+    color: rgb(126, 243, 9);
+    font-family: 'Kaushan Script';
+    letter-spacing: 1px;
+    text-align: right;
+}
+
+.main-content p{
+   color: white;
+   font-family: 'Barlow Condensed', sans-serif;
+   line-height: 36px;
+   text-align: right;
+}
+
+.main-image img{
+    width: 750px;
+}
+
+.logo-item i{
+    font-size: 40px !important;
+}
+
+#customer-mail{
+    padding: 10px 40px;
+    background-color: black;
+    border: 2px solid rgb(126, 243, 9);
+    border-radius: 2px;    
+    width: 50%;
+}
+
+::placeholder{
+    color: rgb(126, 243, 9);
+    font-family: 'Barlow Condensed', sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.main-content input[type='submit']{
+    background-color: rgb(126, 243, 9);
+    padding: 8px 40px;
+    color: black;
+    font-family: 'Bakbak One', cursive;
+    font-weight: bold;
+    border: 2px solid rgb(126, 243, 9);
+    text-transform: uppercase;    
+    width: 30%;
+    letter-spacing: 4px;
+}
+
+.main-content form input:focus, .main-content form input[type=text] {
+    color: rgb(126, 243, 9);
+    font-family: 'Bakbak One', cursive;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+@media screen and (max-width: 700px) {
+    
+}
+  
