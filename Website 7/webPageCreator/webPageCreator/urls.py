@@ -23,4 +23,5 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
+    path('schedule_demo/', views.schedule_demo, name='schedule_demo')
 ]
