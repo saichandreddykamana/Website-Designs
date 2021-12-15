@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bakbak+One&family=Barlow+Condensed&family=Bebas+Neue&family=Fredericka+the+Great&family=Heebo&family=Kaushan+Script&family=Mulish&family=Open+Sans+Condensed:ital,wght@1,300&family=Oswald&family=Patua+One&family=Righteous&family=Roboto+Slab:wght@300;400;500&family=Yanone+Kaffeesatz:wght@500&family=Zilla+Slab+Highlight:wght@700&display=swap');
+
+body{
+    padding: 0;
+    margin: 0;
+}
+
+.navbar{
+    margin: 10px;
+    padding: 10px;
+}
+
+.navbar ul{
+    display: contents;
+    list-style: none;
+}
+
+.navbar ul li{
+    padding: 10px 20px;
+    align-items: center;
+    font-family: "Roboto Slab";
+}
+
+.navbar a{
+    text-decoration: none;
+    color: black;
+}
+
+.navbar a:hover{
+    color: black;
+}
+
+.sign-in-btn, .register-btn{
+    border: none;
+    padding: 8px 40px;
+    border-radius: 2px;
+    color: white;
+}
+
+.sign-in-btn{
+    background: #d80014;
+}
+
+.main-content{
+    padding: 20px 70px;
+}
