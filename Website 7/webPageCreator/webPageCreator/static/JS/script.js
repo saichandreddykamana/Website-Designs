@@ -28,3 +28,28 @@ $('#demo-form').on('submit', function(e){
            failure: function() {}
        });
 });
+
+
+function signInForm(action){
+  var modal = document.getElementById("myModal");
+      modal.style.display = "block";
+  var sign_in = document.getElementById('sign-in-form');
+  var register = document.getElementById('register-form');
+  if(action == 'sign-in'){
+    sign_in.style.display = 'block';
+    register.style.display = 'none';
+  }
+  if(action == 'register'){
+    sign_in.style.display = 'none';
+    register.style.display = 'block';
+  }
+}
+
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  var modal = document.getElementById("myModal");
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}

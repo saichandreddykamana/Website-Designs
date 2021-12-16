@@ -5,6 +5,8 @@ from webPageCreator.models import demoCustomers
 from datetime import datetime, timedelta
 import re
 import os
+import smtplib
+from email.message import EmailMessage
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', "webPageCreator.settings")
 
 def index(request):
@@ -25,11 +27,35 @@ def schedule_demo(request):
                 exists = True
             else:
                 customer = demoCustomers.objects.create(customer_mail = customer_mail, demo_date = datetime.now() + timedelta(days=1))
-                customer = demoCustomers.objects.filter(customer_mail=customer_mail)
-                customer_details = serializers.serialize("json", customer)
+                customer = demoCustomers.objects.get(customer_mail=customer_mail)
+                sendMail(customer.customer_mail, customer.demo_date.strftime("%Y-%m-%d %H:%M:%S"))
+                customer_details = serializers.serialize("json", [demoCustomers.objects.get(customer_mail=customer_mail)])
+                
         else:
             customer_details = 'Please enter valid E-Mail Address.'
     response = {'customer_details': customer_details, 'exists': exists}
     return JsonResponse(response)
     
+ 
+ 
+def sendMail(receiver_mail,receiver_demo_date):
+    try:
+        gmail_user = 'wePageCreatorPython@gmail.com'
+        sender_mail = gmail_user
+        gmail_password = 'Python12#'
+        to = [receiver_mail,sender_mail]
+        subject = 'Demo booked for webPageCreator Application'
+        body = 'Customer Mail : ' + receiver_mail + '  Booked Date  : ' + receiver_demo_date + '.'
+        message = EmailMessage()
+        message.set_content(body)
+        message['Subject'] = subject
+        message['From'] = sender_mail
+        message['To'] = ','.join(to)
+        smtp = smtplib.SMTP_SSL('smtp.gmail.com', 465)
+        smtp.login(gmail_user,gmail_password)
+        smtp.send_message(message)
+        smtp.quit()
+        print("Email Sent Successfully.")
+    except Exception as ex:
+        print("ERROR IN SEND MAIL M : ", ex)
     
