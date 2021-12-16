@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse, JsonResponse
 from django.core import serializers
-from webPageCreator.models import demoCustomers
+from webPageCreator.models import demoCustomers, users
 from datetime import datetime, timedelta
 import re
 import os
@@ -11,6 +11,17 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', "webPageCreator.settings")
 
 def index(request):
     return render(request, 'home.html')
+
+
+def login(request):
+    if request.method == 'POST':
+        email = None
+        password = None
+        if email is not None and password is not None:
+            user = users.objects.filter(email=email)
+            if user.exists():
+                pass
+        return render(request, 'home.html')
 
 
 def schedule_demo(request):
@@ -36,7 +47,6 @@ def schedule_demo(request):
     response = {'customer_details': customer_details, 'exists': exists}
     return JsonResponse(response)
     
- 
  
 def sendMail(receiver_mail,receiver_demo_date):
     try:

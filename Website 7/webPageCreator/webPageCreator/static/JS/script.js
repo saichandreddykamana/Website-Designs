@@ -29,6 +29,26 @@ $('#demo-form').on('submit', function(e){
        });
 });
 
+$('#login-form').on('submit', function(e){
+  e.preventDefault();
+    $.ajax({
+         type : "POST",
+         url: "login/",
+         data: {
+          email : $('#login_email').val(),
+          password: $('#login_password').val(),
+          csrfmiddlewaretoken: $("input[name=csrfmiddlewaretoken]").val()
+         },
+         
+         success: function(data){
+          
+         },
+
+         failure: function() {}
+     });
+});
+
+
 
 function signInForm(action){
   var modal = document.getElementById("myModal");
@@ -50,6 +70,10 @@ function signInForm(action){
 window.onclick = function(event) {
   var modal = document.getElementById("myModal");
   if (event.target == modal) {
-    modal.style.display = "none";
+    hideForm();
   }
+}
+
+function hideForm(){
+  document.getElementById("myModal").style.display = 'none';
 }

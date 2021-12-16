@@ -79,9 +79,31 @@
             <div class="modal-content">
               <div class="sign-in-form" id="sign-in-form">
                   <h1>Sign In</h1>
+                  <form id="login-form" method="POST">
+                        {% csrf_token %}
+                      <input type="email" name="login_email" id="login_email" class="form-control" placeholder="E-mail Address" required>
+                      <input type="password" pattern="(?=.*?[#?!@$%^&*-\]\[])" name="login_password" id="login_password" class="form-control" placeholder="Password" required>
+                      <div>
+                        <button type="submit" id="login-btn" class="btn btn-primary"> Login </button>
+                        <button type="button" id="cancel-btn" class="btn btn-danger" onclick="hideForm()">Cancel</button>
+                      </div>
+                  </form>
               </div>
               <div class="register-form" id="register-form">
                   <h1>Register</h1>
+                  <form id="register" method="POST">
+                        {% csrf_token %}
+                      <input class="form-control" type="text" name="first_name" id="first_name" placeholder="First Name" required>
+                      <input class="form-control" type="text" name="last_name" id="last_name" placeholder="Last Name" required>
+                      <input class="form-control" type="email" name="email" id="email" placeholder="E-Mail Address" required>
+                      <input class="form-control" type="text" name="username" id="username" placeholder="User name" required>
+                      <input class="form-control" type="password" name="password" id="password" placeholder="Password" pattern="(?=.*?[#?!@$%^&*-\]\[])" required>
+                      <input class="form-control" type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password" pattern="(?=.*?[#?!@$%^&*-\]\[])" required>
+                      <div>
+                        <button type="submit" id="register-btn" class="btn btn-primary"> Register </button>
+                        <button type="button" id="cancel-btn" class="btn btn-danger" onclick="hideForm()">Cancel</button>
+                      </div>
+                  </form>
               </div>
             </div>
           

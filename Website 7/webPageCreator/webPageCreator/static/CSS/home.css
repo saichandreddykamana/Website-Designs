@@ -241,3 +241,47 @@ body{
   text-decoration: none;
   cursor: pointer;
 }
+
+.sign-in-form, .register-form{
+    padding: 20px 60px;
+    border: 2px solid rgb(17, 121, 124);
+    background: rgb(17, 121, 124);
+    border-radius: 5px;
+}
+
+.sign-in-form h1, .register-form h1{
+    text-align: center;
+    font-family: 'Roboto Slab';
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    padding: 20px;
+    font-weight: bold;
+}
+
+.sign-in-form form, .register-form form{
+    padding: 5px 20px;
+    width: inherit;
+}
+
+.sign-in-form form div, .register-form form div{
+    text-align: center;
+}
+
+.sign-in-form form input, .register-form form input{
+    margin: 15px 20px;
+    width: -webkit-fill-available;
+    border: 2px solid black;
+}
+
+#login-btn, #register-btn{
+    background: #29840b;
+    border: 2px solid black;
+    padding: 5px 60px;
+    margin: 1px 5px;
+}
+
+#cancel-btn{
+    padding: 5px 60px;
+    border: 2px solid black;
+    margin: 1px 5px;
+}
