@@ -28,10 +28,10 @@
                       <a href="#about-content"> About </a>
                   </li>
                   <li class="button-item">
-                      <button class="sign-in-btn" onclick="signInForm('sign-in')"><i class="fas fa-sign-in-alt"></i> Sign in</button>
+                      <a class="sign-in-btn" href="{% url 'login' %}"><i class="fas fa-sign-in-alt"></i> Sign in</a>
                   </li>
                   <li class="button-item">
-                      <button class="register-btn" onclick="signInForm('register')"><i class="fas fa-user-plus"></i> Register </button>
+                      <a class="register-btn" href="{% url 'register' %}"><i class="fas fa-user-plus"></i> Register </a>
                   </li>
               </ul>
           </nav>
@@ -72,41 +72,6 @@
                       <a href="">Terms of Service</a>
                   </li>
               </ul>
-          </div>
-          <div id="myModal" class="modal">
-
-            <!-- Modal content -->
-            <div class="modal-content">
-              <div class="sign-in-form" id="sign-in-form">
-                  <h1>Sign In</h1>
-                  <form id="login-form" method="POST">
-                        {% csrf_token %}
-                      <input type="email" name="login_email" id="login_email" class="form-control" placeholder="E-mail Address" required>
-                      <input type="password" pattern="(?=.*?[#?!@$%^&*-\]\[])" name="login_password" id="login_password" class="form-control" placeholder="Password" required>
-                      <div>
-                        <button type="submit" id="login-btn" class="btn btn-primary"> Login </button>
-                        <button type="button" id="cancel-btn" class="btn btn-danger" onclick="hideForm()">Cancel</button>
-                      </div>
-                  </form>
-              </div>
-              <div class="register-form" id="register-form">
-                  <h1>Register</h1>
-                  <form id="register" method="POST">
-                        {% csrf_token %}
-                      <input class="form-control" type="text" name="first_name" id="first_name" placeholder="First Name" required>
-                      <input class="form-control" type="text" name="last_name" id="last_name" placeholder="Last Name" required>
-                      <input class="form-control" type="email" name="email" id="email" placeholder="E-Mail Address" required>
-                      <input class="form-control" type="text" name="username" id="username" placeholder="User name" required>
-                      <input class="form-control" type="password" name="password" id="password" placeholder="Password" pattern="(?=.*?[#?!@$%^&*-\]\[])" required>
-                      <input class="form-control" type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password" pattern="(?=.*?[#?!@$%^&*-\]\[])" required>
-                      <div>
-                        <button type="submit" id="register-btn" class="btn btn-primary"> Register </button>
-                        <button type="button" id="cancel-btn" class="btn btn-danger" onclick="hideForm()">Cancel</button>
-                      </div>
-                  </form>
-              </div>
-            </div>
-          
           </div>
       </div>
       <script src="{% static 'JS/script.js' %}" type="text/javascript"></script>

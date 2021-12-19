@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse, JsonResponse
 from django.core import serializers
-from webPageCreator.models import demoCustomers, users
+from webPageCreator.models import demoCustomers
 from datetime import datetime, timedelta
 import re
 import os
@@ -13,15 +13,16 @@ def index(request):
     return render(request, 'home.html')
 
 
+def register(request):
+    return render(request, 'register.html')
+
+
+def dashboard(request):
+    return render(request, 'dashboard.html')
+
+
 def login(request):
-    if request.method == 'POST':
-        email = None
-        password = None
-        if email is not None and password is not None:
-            user = users.objects.filter(email=email)
-            if user.exists():
-                pass
-        return render(request, 'home.html')
+    return render(request, 'login.html')           
 
 
 def schedule_demo(request):
