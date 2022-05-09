@@ -9,10 +9,78 @@
     <link href="{% static 'CSS/dashboard.css' %}" rel="stylesheet" />
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
 <body>
-    DASHBOARD
+    <nav class="navbar-dashboard" id="navbar">
+        <ul>
+            <li>
+                <a href=""> home </a>
+            </li>
+            <li>
+                <a href=""> profile </a>
+            </li>
+            <li>
+                <a href=""> help </a>
+            </li>
+            <li>
+                <a href=""> logout </a>
+            </li>
+        </ul>
+    </nav>
+    <div class="main-container">
+        <div class="create-container">
+            <form action="/createpage/" method="post" id="createpage-form">
+                <input type="text" name="htmlpage" id="htmlpage" class="form-control" placeholder="Enter HTML Page Name">
+                <input type="text" name="csspage" id="csspage" class="form-control" placeholder="Enter CSS Page Name">
+                <button type="submit" class="btn btn-primary btn-sm">Create Web Page</button>
+            </form>
+        </div>
+        <div class="table-container">
+            <table class="table table-bordered">
+                <tr class="table-primary">
+                    <td>
+                        HTML PAGES
+                    </td>
+                    <td>
+                        CSS PAGES
+                    </td>
+                    <td>
+                        ACTIONS
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        HTML 1
+                    </td>
+                    <td>
+                        CSS 1
+                    </td>
+                    <td class="btn-section">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Action
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Edit HTML Page</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Link other HTML Pages</a>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-success">
+                            PREVIEW
+                        </button>
+                        <button class="btn btn-danger">
+                            DELETE
+                        </button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
 </body>
 </html>

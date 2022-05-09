@@ -26,19 +26,22 @@
                 <li class="list-item">
                     <a href="#about-content"> About </a>
                 </li>
+                {% if not request.user.is_authenticated %}
                 <li class="button-item">
-                    <a class="sign-in-btn" href="{% url 'login' %}"><i class="fas fa-sign-in-alt"></i> Sign in</a>
+                    <a class="sign-in-btn" href="{% url 'loginuser' %}"><i class="fas fa-sign-in-alt"></i> Sign in</a>
                 </li>
                 <li class="button-item">
                     <a class="register-btn" href="{% url 'register' %}"><i class="fas fa-user-plus"></i> Register </a>
                 </li>
+                {% else %}
+                  <a href="{% url 'logout' %}"> Logout</a>
+                {% endif %}
             </ul>
         </nav>
 {% block content %}
 
 {% endblock %}
         </div>
-    
         <script src="{% static 'JS/script.js' %}" type="text/javascript"></script>
     </body>
   </html>

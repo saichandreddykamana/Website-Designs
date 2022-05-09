@@ -2,4 +2,8 @@
 {% load static %}
 {% block content %}
  <h1> Register </h1>
+ <form action="" method="post">
+     {% csrf_token %} 
+     <button type="submit"> Register </button>
+ </form>
  {% endblock %}

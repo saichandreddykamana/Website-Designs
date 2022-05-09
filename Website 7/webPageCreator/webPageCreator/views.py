@@ -1,8 +1,10 @@
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from django.http import HttpResponse, JsonResponse
 from django.core import serializers
 from webPageCreator.models import demoCustomers
 from datetime import datetime, timedelta
+from django.conf import settings
+from django.contrib.auth import authenticate, login, logout
 import re
 import os
 import smtplib
@@ -17,8 +19,26 @@ def register(request):
     return render(request, 'register.html')
 
 
-def login(request):
-    return render(request, 'login.html')           
+def dashboard(request):
+    # if request.user.is_authenticated:
+    #     return render(request, 'dashboard.html')
+    # return redirect('login')
+    return render(request, 'dashboard.html')
+
+
+def loginuser(request):
+    if request.method == 'POST':
+        email = request.POST['login_email']
+        password = request.POST['login_password']
+        user = authenticate(request, username=email, password=password)
+        login(request, user)
+        return render(request, 'dashboard.html')
+    else:
+        return render(request, 'login.html')           
+
+
+def logout(request):
+    pass
 
 
 def schedule_demo(request):
