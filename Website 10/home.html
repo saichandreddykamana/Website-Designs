@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Website 10</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="heading">
+            <h1>snap</h1>
+        </div>
+        <div class="nav-items-menu">
+            <i class="fa-solid fa-bars" onclick="showmenu()"></i>
+        </div>
+        <div class="menu-items" id="menu-items">
+            <div class="close-div"> <i class="fa-solid fa-xmark" onclick="hidemenu()"></i> </div>
+            <ul>
+                <li>Features <i class="fa-solid fa-angle-down"></i></li>
+                <li>Company <i class="fa-solid fa-angle-down"></i></li>
+                <li>Careers</li>
+                <li>About</li>
+                <li>Login</li>
+                <li>Register</li>
+            </ul>
+        </div>
+        <div class="nav-items">
+            <div>
+                <div class="item">
+                    <span class="item-heading"> Features <i class="fa-solid fa-angle-down"></i></span>
+                    <ul class="item-list">
+                        <li><i class="fa-solid fa-clipboard-list"></i> Todo List </li>
+                        <li><i class="fa-solid fa-calendar-day"></i> Calendar </li>
+                        <li><i class="fa-solid fa-tree"></i> Reminders </li>
+                        <li><i class="fa-solid fa-clock"></i> Planning </li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <span class="item-heading"> Company <i class="fa-solid fa-angle-down"></i></span>
+                    <ul class="item-list">
+                        <li> History </li>
+                        <li> Team </li>
+                        <li> Blog </li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <span class="item-heading"> Careers </span>
+                </div>
+                <div class="item">
+                    <span class="item-heading"> About </span>
+                </div>
+            </div>
+            <div>
+                <div class="item">
+                    <button class="btn btn-login"> Login </button>
+                </div>
+                <div class="item">
+                    <button class="btn btn-register active"> Register </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-container">
+            <div>
+                <div class="image-container"></div>
+                <h1>Make remote work</h1>
+                <p>Get your team in sync. no matter your location, Streamline processes create team rituals,, and watch productivity soar.</p>
+                <button class="btn btn-main"> Learn more</button>
+                <div class="company-container">
+                    <div class="company">
+                        <img src="../Website 10/images/client-audiophile.svg" alt="company-logo">
+                    </div>
+                    <div class="company">
+                        <img src="../Website 10/images/client-databiz.svg" alt="company-logo">
+                    </div>
+                    <div class="company">
+                        <img src="../Website 10/images/client-maker.svg" alt="company-logo">
+                    </div>
+                    <div class="company">
+                        <img src="../Website 10/images/client-meet.svg" alt="company-logo">
+                    </div>
+                </div>
+            </div>
+    </div>
+    <script type="text/javascript">
+        function hidemenu(){
+            document.getElementById("menu-items").style.right = '-400px';
+        }
+        function showmenu(){
+            document.getElementById("menu-items").style.right = '0';
+        }
+    </script>
+</body>
+</html>
