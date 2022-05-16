@@ -1,0 +1,47 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --verdana: Verdana,sans-serif;
+}
+
+html, body {
+    font-family: var(--verdana);
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.container{
+    max-width: 100%;
+}
+
+.navbar{
+    width: 100%;
+}
+
+.navbar > ul{
+    list-style-type: none;
+    margin: 0;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.navbar > ul > li{   
+    padding: 1%;
+    display: inline;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    float: right;
+}
+
+@media only screen and (max-width:800px){
+  .navbar > ul > li{
+      display: none;
+  }
+
+  .navbar > ul > li:nth-child(1){
+      display: block;
+  }
+}
