@@ -1,0 +1,243 @@
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Barlow', sans-serif;
+}
+
+.navbar{
+    padding: 20px;
+    max-width: 100%;
+    background-color: hsl(200deg 100% 62%);
+}
+
+.navbar ul{
+    list-style-type: none;
+    overflow: hidden;
+}
+
+.navbar li{
+    float: right;
+    padding: 10px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+    color: white;
+    font-family: inherit;
+    font-weight: 300;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.navbar li:nth-child(1){
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.item:hover{
+    background-color: rgb(248, 248, 248, 0.2);
+}
+
+.container{
+    max-width: 100%;
+}
+
+.main-container{
+    width: 100%;
+    display: flex;
+    background-image: url('../Website 11/images/desktop/image-header.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.main-container > div{
+    width: 100%;
+    text-align: center;
+}
+
+.main-container h1{
+    font-family: 'Fraunces', serif;
+    font-size: 4em;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 5%;
+    color: white;
+}
+
+.main-container i{
+    font-size: 6em;
+    color: white;
+    padding: 5%;
+}
+
+.mini-container{
+    display: flex;
+}
+
+.mini-container > div{
+    width: 50%;
+}
+
+.description{
+    padding: 10%;
+}
+
+.mini-container:nth-child(2) .image{
+    background-image: url('../Website 11/images/desktop/image-transform.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.mini-container:nth-child(3) .image{
+    background-image: url('../Website 11/images/desktop/image-stand-out.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.description h2{
+    text-align: left;
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    text-transform: capitalize;
+    font-size: 40px;
+    padding-bottom: 10%;
+}
+
+.mini-description h2, .team h2{
+    text-align: center;
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    text-transform: capitalize;
+    font-size: 25px;
+    color: rgb(86, 86, 86);
+}
+
+.description .btn{
+    background-color: transparent;
+    font-family: 'Fraunces', serif;
+    border: none;
+    border-bottom: 4px solid white;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 5% 0%;
+    font-size: 16px;
+    letter-spacing: 2px;
+    padding-bottom: 1%;
+    cursor: pointer;
+}
+
+.description:nth-child(1) .btn:hover{
+    border-bottom: 4px solid #fed501;
+}
+
+.description:nth-child(2) .btn:hover{
+    border-bottom: 4px solid #fe7263;
+}
+
+.description p{
+    text-align: left;
+    font-size: 14px;
+}
+
+.mini-description p{
+    font-size: 14px;
+    text-align: center;
+}
+
+.mini-description h2{
+    padding-bottom: 20px;
+}
+
+.mini-description{
+    padding: 30% 10% 10% 10%;
+}
+
+.mini-description:nth-child(1){
+    background-image: url('../Website 11/images/desktop/image-graphic-design.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.mini-description:nth-child(2){
+    background-image: url('../Website 11/images/desktop/image-photography.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.team{
+    display: block;
+    padding: 5%;
+}
+
+.team h2{
+    padding: 4%;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.team > div{
+    display: flex;
+}
+
+.team-container{
+    text-align: center;
+}
+
+.team-container img{
+    height: 170px;
+    width: 170px;
+    border-radius: 50%;
+    padding: 2%;
+}
+
+.team-container p{
+    padding: 50px 10px;
+    font-size: 15px;
+}
+
+.team-container span{
+    color: gray;
+}
+
+.footer{
+    padding: 50px;
+    background-color: #9bdbcd;
+    text-align: center;
+}
+
+.footer h4{
+    color: #0f6451;
+    font-family: 'Fraunces', serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.footer ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+.footer li{
+    padding: 20px;
+    font-weight: bold;
+    color: #078469b8;
+    cursor: pointer;
+}
+
+.footer-icons i{
+    padding: 20px;
+    cursor: pointer;
+}
+
+.footer li:hover, .footer-icons i:hover{
+    color: white;
+}
