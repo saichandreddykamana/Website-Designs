@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Website 12</title>
+</head>
+<body>
+    <div class="main-container">
+        <div class="header">
+            <div class="navbar">
+                <ul class="nav-menu">
+                    <li class="logo">
+                        <span>Blogr</span> 
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+                    </li>
+                </ul>
+                <ul class="menu" id="menu">
+                    <li class="cancel">
+                        <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+                    </li>
+                    <li class="logo">
+                        <span>Blogr</span> 
+                    </li>
+                    <li>
+                        Products
+                    </li>
+                    <li>
+                        Company
+                    </li>
+                    <li>
+                        Connect
+                    </li>
+                    <li>
+                        <button class="btn"> Login</button>
+                    </li>
+                    <li>
+                        <button class="btn styled"> Register</button>
+                    </li>
+                </ul>
+            </div>
+            <div class="header-container">
+                <h1>
+                    A modern publishing platform
+                </h1>
+                <p>
+                    Grow your audience and build your online brand
+                </p>
+                <div>
+                    <button class="btn styled">
+                        Start for free
+                    </button>
+                    <button class="btn simple">
+                        Learn more
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <h2> Designed for the future</h2>
+            <div class="mini-container">
+                <h3> Introducing an extensible editor</h3>
+                <p>
+                    Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. The editor supports management of multiple blogs and allows easy manipulation of embeds such as images, videos,, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or change the looks of a blog.
+                </p>
+            </div>
+            <div class="mini-container">
+                <h3> Robust content management</h3>
+                <p>
+                    Flexible content management enables users to easily move through posts. Increase the usability of your blog by adding customized categories, sections, format, or flow. With this functionality, you're in full control.
+                </p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="img-container"></div>
+            <div class="mini-container">
+                <div>
+                    <h3>
+                        State of the Art Infrastructure
+                    </h3>
+                    <p>
+                        With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="img-container"></div>
+            <div>
+                <div class="mini-container">
+                    <h3>
+                        Free, open, simple
+                    </h3>
+                    <p>
+                        Blogr is a free and open source application backed by a large community of helpful developers. It supports features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools, and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.
+                    </p>
+                </div>
+                <div class="mini-container">
+                    <h3>
+                        Powerful tooling
+                    </h3>
+                    <p>
+                        Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but capable of producing even the most complicated sites.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <h2>Blogr</h2>
+            <div class="footer-links">
+                <div>
+                    <h3>Product</h3>
+                    <ul>
+                        <li>
+                            Overview
+                        </li>
+                        <li>
+                            Pricing
+                        </li>
+                        <li>
+                            Marketplace
+                        </li>
+                        <li>
+                            Features
+                        </li>
+                        <li>
+                            Integrations
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Company</h3>
+                    <ul>
+                        <li>
+                            About
+                        </li>
+                        <li>
+                            Team
+                        </li>
+                        <li>
+                            Blog
+                        </li>
+                        <li>
+                            Careers
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Connect</h3>
+                    <ul>
+                        <li>
+                            Contact
+                        </li>
+                        <li>
+                            Newsletter
+                        </li>
+                        <li>
+                            Linkedin
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function showMenu(){
+            document.getElementById('menu').style.right = '0';
+        }
+        function hideMenu(){
+            document.getElementById('menu').style.right = '-350px';
+        }
+    </script>
+</body>
+</html>
