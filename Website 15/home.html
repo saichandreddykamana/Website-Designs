@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+    integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+    crossorigin=""/>
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+    integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+     crossorigin=""></script>
+     <script src='https://api.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.js'></script>
+     <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.css' rel='stylesheet' />
+    <title>Website 15</title>
+</head>
+<body>
+    <div class="main-container">
+        <div class="address-container">
+            <h1>IP Address Tracker</h1>
+            <form name="ip-form" id="ip-form">
+                <input type="text" name="ip-address-input" placeholder="Enter IP-address..." id="ip-address-input" class="input-field">
+                <button name="input-submit" id="input-submit"><img src="../Website 15/images/icon-arrow.svg" alt="arrow"></button>
+            </form>
+         </div>
+        <div class="address-info-container">
+            <div>
+                <div class="ip-address">
+                    <span>ip address</span>
+                    <h2 id="ip-header">N/A</h2>
+                </div>
+                <div class="location">
+                    <span>location</span>
+                    <h2 id="location-header">N/A</h2>
+                </div>
+                <div class="time-zone">
+                    <span>timezone</span>
+                    <h2 id="time-zone-header">N/A</h2>
+                </div>
+                <div class="isp">
+                    <span>isp</span>
+                    <h2 id="isp-header">N/A</h2>
+                </div>
+            </div>
+        </div>
+        <div class="map-container">
+            <div id="map" class="map"></div>
+        </div>
+<script>
+
+</script>
+    </div>
+    <script type="text/javascript">
+        
+        mapboxgl.accessToken = 'pk.eyJ1Ijoic2FpY2hhbmQ0NDkyIiwiYSI6ImNsM2JuY2RqejAwZTAzY252ZDhvMmRhNGYifQ.s-VZkcGYUWIpupCjef-7zA';
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v11'
+        });
+
+        document.querySelector('#ip-form').addEventListener('submit', function() {
+            event.preventDefault();
+            var ip_add = this.elements['ip-address-input'].value;
+            $.ajax({
+                type: "GET",
+                url: 'https://geo.ipify.org/api/v2/country,city?apiKey=at_Z0Vf6nmeUp0orUTNNbyuhIRmZrZ1P',
+                data: {ipAddress: ip_add},
+                success: function(data){
+                    var ip, location, timezone, isp;
+                    if(data.hasOwnProperty('ip')){
+                        ip = data.ip;
+                    }else{
+                        ip = 'N/A';
+                    }
+
+                    if(data.hasOwnProperty('location')){
+                        if(data.location.hasOwnProperty('city')){
+                            location = data.location.city + ", "
+                        }else{
+                            location = "N/A, ";
+                        }
+
+                        if(data.location.hasOwnProperty('region')){
+                            location += data.location.region + ", ";
+                        }else{
+                            location += 'N/A, ';
+                        }
+
+                        if(data.location.hasOwnProperty('country')){
+                            location += data.location.country;
+                        }else{
+                            location += 'N/A, ';
+                        }
+
+                        if(data.location.hasOwnProperty('postalCode')){
+                            location += data.location.postalCode;
+                        }else{
+                            location += 'N/A, ';
+                        }
+
+                        if(data.location.hasOwnProperty('timezone')){
+                            timezone = data.location.timezone;
+                        }else{
+                            timezone = 'N/A';
+                        }
+
+                        if(data.location.hasOwnProperty('lat') && data.location.hasOwnProperty('lng')){
+                            map.flyTo({center : [data.location.lng, data.location.lat], zoom: 11.15});
+                        }
+                    }else{
+                        location = 'N/A';
+                        timezone = 'N/A';
+                    }
+
+                    if(data.hasOwnProperty('isp')){
+                        isp = data.isp;
+                    }else{
+                        isp = 'N/A';
+                    }
+                    document.getElementById('ip-header').innerText = ip;
+                    document.getElementById('location-header').innerText = location;
+                    document.getElementById('time-zone-header').innerText = timezone;
+                    document.getElementById('isp-header').innerText = isp;
+                }
+            })
+          });
+    </script>
+</body>
+</html>

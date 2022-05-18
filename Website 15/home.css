@@ -1,0 +1,112 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    max-width: 100%;
+    height: 100vh;
+    background-color: rgb(241, 241, 241);
+    overflow-x: hidden;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+}
+
+@media only screen and (max-width: 1900px){
+    .address-container{
+        padding: 1%;
+        text-align: center;
+        background-image: url('../Website 15/images/pattern-bg.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .address-container h1{
+        padding: 2%;
+        font-size: 30px;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: white;
+    }
+
+    .address-container input{
+        padding: 1.4% 5%;
+        width: 60%;
+        border-radius: 5px;
+        border: none;
+        margin: 2% 2% 10% 2%;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        font-size: 14px;
+        font-family: inherit;
+        font-weight: 700;
+        cursor: pointer;
+    }
+
+    .address-container input::placeholder{
+        font-size: 14px;
+        font-family: inherit;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    .address-container button{
+        padding: 1.3% 3%;
+        border-radius: 5px;
+        background-color: black;
+        cursor: pointer;
+
+    }
+
+    .address-info-container{
+        width: 100%;
+        margin: 3%;
+        margin-top: -5%;
+    }
+
+    .address-info-container > div{
+        width: 90%;
+        display: flex;
+        justify-content: space-around;
+        margin: auto;
+        padding: 2%;
+        background-color: white;
+        border-radius: 10px;
+        align-items: center;
+    }
+
+    .ip-address, .location, .time-zone, .isp{
+        width: 25%;
+        border-right: 2px solid rgb(211, 211, 211);
+        padding: 1%;
+        height: 100px;
+    }
+
+    .isp{
+        border: none;
+    }
+
+    .ip-address span, .location span, .time-zone span, .isp span{
+        color: gray;
+        text-transform: uppercase;
+        font-size: 12px;
+    }
+
+    .ip-address h2, .location h2, .time-zone h2, .isp h2{
+        font-size: 15px;
+        padding: 5% 0%;
+    }
+
+    .map-container{
+        padding: 3% 8%;
+    }
+
+    #map{
+        height: 300px;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 375px){
+
+}
