@@ -3,3 +3,290 @@
     padding: 0;
     margin: 0;
 }
+
+/*
+
+## Layout
+
+  The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Moderate blue: hsl(238, 40%, 52%)
+- Soft Red: hsl(358, 79%, 66%)
+- Light grayish blue: hsl(239, 57%, 85%)
+- Pale red: hsl(357, 100%, 86%)
+
+### Neutral
+
+- Dark blue: hsl(212, 24%, 26%)
+- Grayish Blue: hsl(211, 10%, 45%)
+- Light gray: hsl(223, 19%, 93%)
+- Very light gray: hsl(228, 33%, 97%)
+- White: hsl(0, 0%, 100%)
+
+## Typography
+
+### Body Copy
+
+- Font size (paragraph): 16px
+
+### Font
+
+- Family: [Rubik](https://fonts.google.com/specimen/Rubik)
+- Weights: 400, 500, 700
+
+font-family: 'Rubik', sans-serif;
+
+*/
+
+body{
+    background-color: rgb(241, 241, 241);
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.main-container{
+    width: 80%;
+    margin: 8% auto;
+}
+
+.main-comments{
+    width: 100%;
+}
+
+.reply-comments{
+    border-left: 2px solid hsl(239, 57%, 85%);
+    padding-left: 100px;
+}
+
+.old-comment{
+    margin: 20px 0px;
+    padding: 30px;
+    width: inherit;
+    background-color: white;
+    border-radius: 10px;
+    display: table;
+}
+
+.likes{
+    padding: 20px;
+    width: 75px;
+    display: table-cell;
+}
+
+.likes ul{
+    list-style-type: none;
+    background-color:rgb(241 241 241);
+    border-radius: 5px;
+}
+
+.likes li{
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: inherit;
+    cursor: pointer;
+    padding: 7px 9px;
+    color: hsl(238, 40%, 52%);
+}
+
+.likes img{
+    cursor: pointer;
+    color: lightslategray;
+    width: 13px;
+}
+
+.comment-section{
+    width: 92%;
+    display: table-cell;
+}
+
+.comment-header{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 10px;
+}
+
+.comment-header img{
+    width: 50px;
+    margin: 5px 15px;
+}
+
+.comment-header h1{
+    font-size: 18px;
+    width: 170px;
+    padding: 5px 15px;
+    display: flex;
+    align-items: center;
+}
+
+.comment-header .current{
+    color: white;
+    font-size: 15px;
+    background-color: hsl(238, 40%, 52%);
+    padding: 3px 10px;
+    border-radius: 5px;
+    text-transform: capitalize;
+    margin: 0px 5px;
+}
+
+.comment-header .time{
+    font-size: 14px;
+    width: 70%;
+    color: rgb(152, 151, 151);
+}
+
+.reply-section .reply, .reply-section .delete, .reply-section .edit{
+    cursor: pointer;
+    background-color: transparent;
+    font-family: inherit;
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 16px;
+    margin: 0px 10px;
+    border: none;
+    color: hsl(238, 40%, 52%);
+    display: flex;
+    align-items: center;
+}
+
+.reply-section .delete{
+    color: hsl(358, 79%, 66%);
+}
+
+.like-no:hover{
+    background-color: hsl(238, 40%, 52%);
+    border-radius: 5px;
+}
+
+.reply-section .edit, .comment-reply{
+    color: hsl(238, 40%, 52%);
+    font-weight: 500;
+}
+
+.reply img, .delete img, .edit img{
+    width: auto;
+    padding: 0px 10px;
+}
+
+.comment-description{
+    padding: 5px 20px 20px 20px;
+    width: 80%;
+}
+
+.reply-section{
+    display: flex;
+    padding: 25px;
+}
+
+.comment-description p{
+    text-align: justify;
+}
+
+.submit-comments{
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.new_comment{
+    padding-left: 100px;
+    background-color: transparent;
+    border-left: 2px solid hsl(238, 40%, 52%);
+    margin: 4% 0%;
+}
+
+.new_comment > div{
+    background-color: white;
+    padding: 20px;
+    border-radius: 0px;
+}
+
+.submit-comments > div, .new_comment > div{
+    display: flex;
+    align-items: flex-start;
+}
+
+.submit-comments textarea, .new_comment textarea{
+    width: 80%;
+    border-color: lightgray;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 0px 20px;
+}
+
+textarea::placeholder{
+    font-family: inherit;
+    font-size: 17px;
+}
+
+.submit, .replyComment{
+    background-color: hsl(238, 40%, 52%);
+    border: 2px solid hsl(238, 40%, 52%);
+    border-radius: 5px;
+    font-family: inherit;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: white;
+    padding: 10px 30px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1000px){
+    .old-comment{
+        display: inline-grid;
+    }
+
+    .comment-description{
+        width: 100%;
+        padding: 5px;
+    }
+
+    .reply-comments{
+        padding-left: 20px;
+    }
+
+    .reply-section{
+        width: 100%;
+        display: block;
+    }
+    
+    .likes{
+        width: 100%;
+    }
+
+    .comment-header{
+        padding: 0;
+    }
+
+    .likes ul{
+        display: flex;
+        width: fit-content;
+        float: right;
+    }
+
+    .likes li:nth-child(3){
+        margin-top: -3px;
+    }
+
+    .comments-input{
+        height: 100px;
+    }
+
+    .comment-header h1{
+        display: block;
+    }
+
+    .comment-header .current{
+        margin: 1px 0px;
+    }
+}

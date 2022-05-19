@@ -5,9 +5,152 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <title>Website 16</title>
 </head>
 <body>
-    
+    <div class="main-container">
+        <div class="main-comments">
+            <div class="comment">
+                <div class="old-comment">
+                    <div class="likes">
+                        <ul>
+                            <li class="like-no"> 
+                                <center>
+                                    <img src="../Website 16/images/icon-plus.svg" alt="plus-icon">
+                                </center>    
+                            </li>
+                            <li class="like"> 12 </li>
+                            <li class="like-no"> 
+                                <center>
+                                    <img src="../Website 16/images/icon-minus.svg" alt="minus-icon">
+                                </center> 
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="comment-section">
+                        <div class="comment-header">
+                            <img src="../Website 16/images/avatars/image-amyrobson.png" alt="profile-picture">
+                            <h1>amyrobson</h1>
+                            <span class="time">1 month ago</span>
+                        </div>
+                        <div class="comment-description">
+                            <p>
+                                Impressive! Tough it seems the drag feature could be improved. But overall it looks incredible. You've nailed the design and the responsiveness at various breakpoints works really well.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="reply-section">    
+                        <button class="reply"> <img src="../Website 16/images/icon-reply.svg" alt="reply-icon"> reply</button>
+                    </div>
+                </div>
+                <div class="reply-comments">
+                    <div class="old-comment">
+                        <div class="likes">
+                            <ul>
+                                <li class="like-no"> 
+                                    <center>
+                                        <img src="../Website 16/images/icon-plus.svg" alt="plus-icon">
+                                    </center>    
+                                </li>
+                                <li class="like"> 4 </li>
+                                <li class="like-no"> 
+                                    <center>
+                                        <img src="../Website 16/images/icon-minus.svg" alt="minus-icon">
+                                    </center> 
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="comment-section">
+                            <div class="comment-header">
+                                <img src="../Website 16/images/avatars/image-ramsesmiron.png" alt="profile-picture">
+                                <h1>ramsesmiron</h1>
+                                <span class="time">1 weeks ago</span>
+                            </div>
+                            <div class="comment-description">
+                                <p>
+                                    <span class="comment-reply">@maxblagun</span> if you're still new. I'd recommend focusing on the fundamentals of HTML, CSS, and JS before considering React. It's very tempting to jump ahead but lay a solid foundation first.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="reply-section">    
+                            <button class="reply"> <img src="../Website 16/images/icon-reply.svg" alt="reply-icon"> reply</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="submit-comments">
+            <div>
+                <img src="../Website 16/images/avatars/image-juliusomo.png" alt="profile-picture">
+                <textarea name="comment-input" placeholder="Add a comment..." id="comment-input" cols="30" rows="10"></textarea>
+                <button class="submit" onclick="createNewComment()"> Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        var comment_index = 0;
+        function createNewComment(){
+            var comment = document.getElementById('comment-input').value;
+            let div = document.createElement('div');
+            div.className = 'comment';
+            div.innerHTML = '<div class="old-comment"><div class="likes"><ul><li class="like-no"><center><img src="../Website 16/images/icon-plus.svg" alt="plus-icon"></center></li><li class="like"> 12 </li><li class="like-no"><center><img src="../Website 16/images/icon-minus.svg" alt="minus-icon"></center></li></ul></div><div class="comment-section"><div class="comment-header"><img src="../Website 16/images/avatars/image-amyrobson.png" alt="profile-picture"><h1>amyrobson</h1><span class="time">1 month ago</span></div><div class="comment-description"><p>' + comment + '</p></div></div><div class="reply-section"><button class="reply"> <img src="../Website 16/images/icon-reply.svg" alt="reply-icon"> reply</button></div></div>';
+            var main_div = document.getElementsByClassName('main-comments')[0];
+            main_div.appendChild(div);
+        }
+            
+        $(document.body).on('click', '.reply' , function(){
+            removeCommentBox();
+            var replies_div = $('.reply');
+            var index = replies_div.index($(this));
+            comment_index = index;
+            alert(index);
+            var comment = document.getElementsByClassName('comment')[index];
+            let new_div = document.createElement('div');
+            new_div.className='new_comment';
+            new_div.id = 'new_comment';
+            let div = document.createElement('div');
+            let textarea = document.createElement('textarea');
+            textarea.rows = 5;
+            textarea.cols = 50;
+            textarea.id = 'new_comment_input';
+            textarea.class = 'comment_input';
+            let button = document.createElement('button');
+            button.innerText = 'Reply';
+            button.className = 'replyComment';
+            button.id = 'replyComment';
+            div.appendChild(textarea);
+            div.appendChild(button);
+            new_div.appendChild(div);
+            comment.appendChild(new_div);
+        });
+
+        $(document.body).on('click', '.replyComment' , function(){
+            var comment = document.getElementById('new_comment_input').value;
+            let div = document.createElement('div');
+            div.className = 'old-comment';
+            div.innerHTML = '<div class="likes"><ul><li class="like-no"><center><img src="../Website 16/images/icon-plus.svg" alt="plus-icon"></center></li><li class="like"> 12 </li><li class="like-no"><center><img src="../Website 16/images/icon-minus.svg" alt="minus-icon"></center></li></ul></div><div class="comment-section"><div class="comment-header"><img src="../Website 16/images/avatars/image-amyrobson.png" alt="profile-picture"><h1>amyrobson</h1><span class="time">1 month ago</span></div><div class="comment-description"><p>' + comment + '</p></div></div><div class="reply-section"><button class="reply"> <img src="../Website 16/images/icon-reply.svg" alt="reply-icon"> reply</button></div>';
+            var main_div = document.getElementsByClassName('reply-comments')[comment_index];
+            main_div.appendChild(div);
+            removeCommentBox();
+        });
+
+        function replyToComment(){
+            var reply_div = document.createElement('div');
+            reply_div.className = 'reply-comments';
+            reply_div.appendChild(div);
+        }
+
+        function removeCommentBox(){
+            var divs = document.getElementsByClassName('new_comment');
+            while(divs.length > 0){
+                divs[0].parentNode.removeChild(divs[0]);
+            }
+        }
+    </script>
 </body>
 </html>

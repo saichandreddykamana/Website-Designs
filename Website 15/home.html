@@ -73,56 +73,26 @@
                 data: {ipAddress: ip_add},
                 success: function(data){
                     var ip, location, timezone, isp;
-                    if(data.hasOwnProperty('ip')){
-                        ip = data.ip;
-                    }else{
-                        ip = 'N/A';
-                    }
 
+                    // ip address
+                    ip = (data.hasOwnProperty('ip') === true) ? data.ip : 'N/A';
+
+                    // location and time-zone
                     if(data.hasOwnProperty('location')){
-                        if(data.location.hasOwnProperty('city')){
-                            location = data.location.city + ", "
-                        }else{
-                            location = "N/A, ";
-                        }
-
-                        if(data.location.hasOwnProperty('region')){
-                            location += data.location.region + ", ";
-                        }else{
-                            location += 'N/A, ';
-                        }
-
-                        if(data.location.hasOwnProperty('country')){
-                            location += data.location.country;
-                        }else{
-                            location += 'N/A, ';
-                        }
-
-                        if(data.location.hasOwnProperty('postalCode')){
-                            location += data.location.postalCode;
-                        }else{
-                            location += 'N/A, ';
-                        }
-
-                        if(data.location.hasOwnProperty('timezone')){
-                            timezone = data.location.timezone;
-                        }else{
-                            timezone = 'N/A';
-                        }
-
-                        if(data.location.hasOwnProperty('lat') && data.location.hasOwnProperty('lng')){
-                            map.flyTo({center : [data.location.lng, data.location.lat], zoom: 11.15});
-                        }
-                    }else{
-                        location = 'N/A';
-                        timezone = 'N/A';
+                        location = (data.location.hasOwnProperty('city') === true) ?  (data.location.city + ", ") : "N/A, ";
+                        location += (data.location.hasOwnProperty('region') === true) ?  (data.location.region + ", ") : "N/A, ";
+                        location += (data.location.hasOwnProperty('country') === true) ?  (data.location.country + ", ") : "N/A, ";
+                        location += (data.location.hasOwnProperty('postalCode') === true) ?  (data.location.postalCode + ", ") : "N/A, ";
+                        timezone = data.location.hasOwnProperty('timezone') ? data.location.timezone : 'N/A';
                     }
 
-                    if(data.hasOwnProperty('isp')){
-                        isp = data.isp;
-                    }else{
-                        isp = 'N/A';
-                    }
+                    // isp
+                    isp = data.hasOwnProperty('isp') ? data.isp : 'N/A';
+
+                    // mapping longitude and latitude of the specified location
+                    map.flyTo({center : [((data.location.hasOwnProperty('lng') === true) ? data.location.lng : 0), ((data.location.hasOwnProperty('lat') === true) ? data.location.lat : 0)], zoom: 11.15});
+
+                    // showing data in their belonging divs
                     document.getElementById('ip-header').innerText = ip;
                     document.getElementById('location-header').innerText = location;
                     document.getElementById('time-zone-header').innerText = timezone;
