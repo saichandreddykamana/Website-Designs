@@ -1,0 +1,268 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/*
+
+---colors---
+blue - #0B0D17, rgb(11, 13, 23), hsl(230deg, 35%, 7%)
+light blue - #D0D6F9, rgb(208, 214, 249), hsl(231deg, 77%, 90%)
+cream - #FFFFFF, rgb(255, 255, 255), hsl(0deg, 0%, 100%)
+
+
+---headings & fonts---
+
+font-family: 'Barlow Condensed', sans-serif;
+font-family: 'Bellefair', serif;
+
+Heading 1 - Bellefair Regular - 150px
+Heading 2 - Bellefair Regular - 100px
+Heading 3 - Bellefair Regular - 56px
+Heading 4 - Bellefair Regular - 32px
+Heading 5 - Barlow Condensed Regular - 28px - 4.75 Character Space
+
+Sub-heading 1 - Bellefair Regular - 28px
+Sub-heading 2 - Barlow Condensed Regular - 14px - 2.35 Character Space
+
+Nav text - Barlow Condensed Regular - 16px - 2.7 Character Space 
+*/
+
+html{
+    font-size: 10px;  
+    height: 100%;
+}
+
+body{
+    max-width: 100%;
+    overflow: hidden;  
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.navbar{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    width: 20%;
+    padding: 2%;
+}
+
+.nav-list{
+    width: 80%;
+    display: none;
+}
+
+.list{
+    list-style-type: none;
+    display: table;
+    width: 60%;
+    float: right;
+    text-align: right;
+    background: transparent;
+    backdrop-filter: blur(147px);
+    margin: 0;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+.list-item{
+    display: table-cell;
+    cursor: pointer;
+}
+
+.list-link{
+    text-decoration: none;
+    color: white;
+    font-size: 1.6rem;
+    font-family: 'Barlow Condensed', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2.7px;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    padding: 25px;
+    border-bottom: 2px solid transparent;
+}
+
+.list-link b{
+    padding: 0px 10px 0px 0px;
+}
+
+.list-link:hover{
+    border-bottom: 2px solid white;
+}
+
+.nav-list-menu{
+    display: none;
+}
+
+.nav-list-menu i{
+    padding: 30px;
+    color: white;
+    cursor: pointer;
+    font-size: 3rem;
+}
+
+.main-container{
+    width: 100%;
+    height: inherit;
+    display: flex;
+    align-items: center;
+}
+
+.main-description{
+    width: 70%;
+    height: inherit;
+    display: flex;
+    align-items: center;
+}
+
+.main-description > div{
+    padding: 8%;
+}
+
+.main-btn{
+    width: 30%;
+    height: inherit;
+    display: flex;
+    align-items: center;
+}
+
+.main-description h1{
+    font-family: 'Barlow Condensed';
+    font-size: 2.1rem;
+    letter-spacing: 4.75px;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 400;
+    padding: 2% 0%;
+}
+
+.main-description h2{
+    font-family: 'Bellefair';
+    font-size: 12rem;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 400;
+    padding: 2% 0%;
+}
+
+.main-description p{
+    font-family: 'Barlow Condensed';
+    font-size: 1.6rem;
+    color: white;
+    font-weight: 400;
+    width: 45%;
+    line-height: 30px;
+    text-align: justify;
+}
+
+.btn{
+    width: 8em;
+    height: 8em;
+    font-family: 'Bellefair';
+    text-align: center;
+    border-radius: 50%;
+    text-transform: uppercase;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Phones */ 
+@media only screen and (max-width : 550px) {
+    body{
+        background-image: url('../assets/home/background-home-mobile.jpg');
+        overflow: visible;
+    }
+    
+    .btn{
+        font-size: 2rem;
+    }
+
+    .main-container, .main-description, .main-btn{
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .main-description h1{
+        font-size: 3.5rem;
+    }
+
+    .main-description h2{
+        font-size: 15rem;
+    }
+
+    .main-btn{
+        text-align: center;
+    }
+    
+    .main-description > div{
+        padding: 5%;
+    }
+}
+
+/* Tablets */
+@media only screen and (max-width : 900px) {
+    body{
+        background-image: url('../assets/home/background-home-tablet.jpg');        
+        overflow: visible;
+    }
+
+    .btn{
+        font-size: 2.5rem;
+    }
+
+    .main-container, .main-description, .main-btn{
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .main-description h1{
+        font-size: 3.5rem;
+    }
+
+    .main-description h2{
+        font-size: 15rem;
+    }
+
+    .main-description p{
+        width: 100%;
+    }
+
+    .main-btn{
+        text-align: center;
+    }
+    
+    .main-description > div{
+        padding: 5%;
+    }
+
+}
+
+/* Desktops */
+@media only screen and (max-width : 1700px) {
+    body{
+        background-image: url('../assets/home/background-home-desktop.jpg');
+    }
+
+    .btn{
+        font-size: 4rem;
+    }
+
+    .main-description p{
+        width: 45%;
+    }
+}
