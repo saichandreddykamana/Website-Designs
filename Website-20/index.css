@@ -1,0 +1,360 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html, body{
+    font-family: 'Georgia', 'Times', 'Times New Roman', serif;
+    color: black;
+    background-color: #fbfbfb;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: "Franklin ITC", sans-serif;
+}
+
+#first-container{
+    min-height: 100vh;
+    max-width: 100%;
+    background-image: url('../Website-20/images/main-container.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#first-container h1{
+    font-family: 'Anton', sans-serif; 
+    font-size: 7em;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    padding: 30px;
+    font-weight: 600;
+}
+
+#second-container,#second-container .post, #second-container .post-heading, #second-container .post-description, #third-container, #fourth-container, #fifth-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;   
+}
+
+#second-container .post-date{
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 10px auto;
+}
+
+.latest{
+    padding: 5px 10px;
+    margin-right: 10px;
+    color: white;
+    background-color: red;
+    letter-spacing: 1px;
+    border-radius: 2px;
+}
+
+.heading{
+    font-weight: bold;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#second-container .heading{
+    font-size: 35px;
+    text-align: center;
+}
+
+.heading:hover{
+    text-decoration: underline;
+}
+
+.post-author{
+    font-weight: bold;
+    text-transform: capitalize;    
+    padding: 10px;
+}
+
+.author{
+    color: blue;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.author:hover{
+    text-decoration: underline;
+}
+
+.post-description{
+    max-width: 100%;
+    padding: 20px;
+}
+
+.description{
+    margin: 0 auto;
+    text-align: justify;
+    line-height: 2;
+    color: rgb(103, 103, 103);
+}
+
+#second-container .description{
+    width: 70%;
+}
+
+#third-container{
+    border-top: 1px solid lightgray;
+}
+
+#third-container .post-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    max-width: 100%;
+    padding: 30px;
+    margin: 0 auto;
+}
+
+.post-container .post{
+    flex-basis: 30%;
+    padding: 30px;
+}
+
+.container-heading{
+    font-size: 35px;
+    font-weight: normal;
+}
+
+.post-container .post-author, .post-container .author{
+    font-size: 13px;
+    text-transform: capitalize;
+}
+
+.post-container .post-description{
+    padding: 10px;
+}
+
+.post-container .description{
+    font-size: 14px;
+    color: rgb(63, 63, 63);
+}
+
+.post-info{
+    font-size: 10px;
+    padding: 10px;
+    color: rgb(118, 115, 115);
+}
+.post-category{
+    padding:0px 10px 0px 0px;
+    cursor: pointer;
+}
+
+.post-category:hover{
+    text-decoration: underline;
+}
+
+#fourth-container p{
+    background-color: #e2e2e2;
+    padding: 10px 30px;
+    border-radius: 4px;
+    font-size: 15px;
+    width: 70%;
+    margin: 0px auto 20px auto;
+    text-align: center;
+    line-height: 2;
+}
+
+#fifth-container{
+    background-image: url('../Website-20/images/noise.png');
+    background-blend-mode:color-burn;
+    background-repeat: repeat;
+    padding: 40px 0px;
+}
+
+#fifth-container .links-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 10px 50px;
+    justify-content: space-between;
+    background-color: rgba(63, 63, 63, 0.1);
+}
+
+#fifth-container .links:first-child{
+    list-style: none;
+}
+
+.links{
+    padding: 30px;
+}
+
+.link{
+    display: inline;
+    padding: 10px 15px;
+    font-size: 12px;
+}
+
+.link a{
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 13px;
+}
+
+.link a:hover{
+    text-decoration: underline;
+}
+
+.shop-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 1% 10%;
+}
+
+.shop-item{
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    padding: 10px 15px;
+    align-items: center;
+}
+
+.shop-item:hover{
+    background-color: rgb(255, 255, 255, 0.7);
+}
+
+.shop-item div{
+    padding: 5px;
+}
+
+.item-heading{
+    font-size: 14px;
+}
+
+.item-description{
+    font-size: 13px;
+    width: 80%;
+    padding: 6px 0px;
+}
+
+.item-link{
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.website-info{
+    width: 100%;
+    padding: 10px 50px;
+}
+
+.website-info p{
+    padding: 10px;
+    font-size: 14px;
+}
+
+.website-info a{
+    text-decoration: none;
+    font-size: inherit;
+    color: black;
+}
+
+.website-info a:hover, .website-info li:hover{
+    text-decoration: underline;
+}
+
+.website-info ul{
+    padding: 0;
+}
+
+.website-info li{
+    font-size: 13px;
+    text-transform: capitalize;
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 800px){
+
+   #first-container h1{
+        font-size: 5em; 
+   }
+   
+   #first-container{
+       min-height: 80vh;
+       background-size: contain;
+   }
+
+   .heading{
+       font-size: 30px;
+   }
+
+    .author{
+        font-size: 15px;
+    }
+
+   .description{
+       width: 100%;
+   }
+
+   .post-container .post{
+       flex-basis: 50%;
+   }
+
+   .links{
+       display: flex;
+       flex-wrap: wrap;
+   }
+
+   .shop-container{
+       flex-direction: column;
+   }
+
+   .shop-item{
+       flex-basis: 100%;
+       align-items: center;
+   }
+}
+
+
+@media only screen and (max-width: 600px){
+    
+    #first-container h1{
+         font-size: 3em; 
+    }
+   
+    #first-container{
+        min-height: 50vh;
+        background-size: contain;
+    }
+
+    .heading{
+        font-size: 25px;
+    }
+
+    .author{
+        font-size: 15px;
+    }
+ 
+    .description{
+        width: 100%;
+    }
+
+    .post-container .post{
+        flex-basis: 100%;
+    }
+
+    .links{
+        display: flex;
+        flex-wrap: wrap;
+    }
+ }
