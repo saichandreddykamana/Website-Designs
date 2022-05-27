@@ -1,0 +1,200 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html, body{
+    font-family: 'Georgia', 'Times', 'Times New Roman', serif;
+    color: black;
+    background-color: #fbfbfb;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: "Franklin ITC", sans-serif;
+}
+
+#article-page-heading{
+    min-height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid lightgray;
+}
+
+#article-page-heading h1{
+    font-size: 70px;
+    text-transform: uppercase;
+    color: #0c5ff1;
+    text-shadow: 2px 2px black;
+    font-weight: 600;
+}
+
+#articles-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.articles, .article-topics{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.articles{
+    flex-basis: 70%;
+    border-right: 1px solid lightgray;
+}
+
+.articles h2, .article-topics h2{
+    padding: 20px 40px;
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.articles h2{
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.article{
+    padding: 20px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.article-heading h3{
+    color: blue;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.article-heading h3:hover{
+    text-decoration: underline;
+}
+
+.article-heading p{
+    padding: 5px 10px
+}
+
+.article-author{
+    color: blue;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.article-author:hover{
+    text-decoration: underline;
+}
+
+.article-date{
+    font-size: 12px;
+    padding-left: 15px;
+    color: gray;
+}
+
+.article-description p{
+    padding: 5px 10px;
+    text-align: justify;
+    font-size: 14px;
+    line-height: 2;
+    color: rgb(63, 63, 63);
+}
+
+.article-buttons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.previous-btn, .next-btn{
+    margin:10px 30px;
+    cursor: pointer;
+    color: white;
+    background-color: gray;
+    padding: 5px 30px;
+    border: 1px solid gray;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.next-btn i{
+    font-size: 13px;
+    padding-left: 10px;
+}
+
+.previous-btn i{
+    font-size: 13px;
+    padding-right: 10px;
+}
+
+.previous-btn:hover, .next-btn:hover{
+    text-decoration: underline;
+}
+
+.article-topics{
+    flex-basis: 30%;
+}
+
+.article-topics h2{
+    text-align: center;
+}
+
+.topic{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 100%;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.topic h3{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 20px 0px;
+}
+
+.sub-topic{
+    list-style-type: none;
+}
+
+.sub-topic-heading p{
+    border-bottom: 1px dotted black;
+    font-size: 13px;
+    padding: 5px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-transform: uppercase;
+}
+
+.topic-number{
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 800px){
+    .articles{
+        flex-basis: 60%;
+    }
+    
+    .article-topics{
+        flex-basis: 40%;
+    }
+}
+ 
+@media only screen and (max-width: 700px){
+    #articles-container{
+        flex-direction: column;
+    }
+
+    .article-description p{
+        width: 100%;
+    }
+}

@@ -14,22 +14,61 @@ h1, h2, h3, h4, h5, h6{
     font-family: "Franklin ITC", sans-serif;
 }
 
+#navbar{
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    border-bottom: 1px solid lightgray;
+}
+
+.navlist{
+    list-style-type: none;
+}
+
+.nav-item{
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 30px;
+}
+
+.nav-item a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.nav-item a:hover{
+    text-decoration: underline;
+}
+
 #first-container{
-    min-height: 100vh;
+    min-height: 80vh;
     max-width: 100%;
     background-image: url('../Website-20/images/main-container.webp');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #first-container h1{
     font-family: 'Anton', sans-serif; 
-    font-size: 7em;
+    font-size: 10em;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 10px;
     padding: 30px;
+    color: #0c5ff1;
+    text-shadow: 2px 2px black;
     font-weight: 600;
 }
 
@@ -356,5 +395,20 @@ h1, h2, h3, h4, h5, h6{
     .links{
         display: flex;
         flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    #navbar{
+        justify-content: flex-start;
+        background-color: white;
+        position: initial;
+    }
+
+    .navlist{
+        list-style-type: none;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: flex-start;
     }
  }

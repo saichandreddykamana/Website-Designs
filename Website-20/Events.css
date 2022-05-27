@@ -1,0 +1,128 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html, body{
+    font-family: 'Georgia', 'Times', 'Times New Roman', serif;
+    color: black;
+    background-color: #fbfbfb;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: "Franklin ITC", sans-serif;
+}
+
+#article-page-heading{
+    min-height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0px 0px 0px;
+    border-bottom: 1px solid lightgray;
+}
+
+#article-page-heading h1{
+    font-size: 70px;
+    padding: 50px 10px;
+    color: #0c5ff1;
+    text-shadow: 2px 2px black;
+    text-transform: uppercase;
+}
+
+#article-page-heading h2{
+    font-size: 30px;
+    font-weight: bold;
+    padding: 10px 0px 0px 0px;
+}
+
+#article-page-heading p{
+    padding: 5px 0px 20px 0px;
+}
+
+.events-container{
+    padding: 1% 10%;
+    border-bottom: 1px solid lightgray;
+}
+
+.events-container > h3{
+    text-align: center;
+    font-size: 25px;
+    text-transform: uppercase;
+    padding: 20px;
+}
+
+.events{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+}
+
+.event{
+  padding: 10px;
+}
+
+.event-heading{
+    text-align: center;
+}
+
+.event-heading h3{
+    font-size: 25px;
+    color: rgb(6, 84, 194);
+    padding: 10px;
+    width: 80%;
+    cursor: pointer;
+    margin: 0 auto;
+}
+.event-heading h3:hover{
+    text-decoration: underline;
+}
+
+.event-heading p{
+    padding: 10px 0px 20px 0px;
+    font-size: 13px;
+    color: rgb(92, 92, 92);
+}
+
+.event-descrption p{
+    line-height: 2;
+    text-align: justify;
+    font-size: 15px;
+    color: rgb(67, 67, 67);
+}
+
+.about-event{
+    padding: 1% 10%;
+}
+
+.about-event h3{
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 20px;
+}
+
+.about-event p{
+    padding: 10px;
+    font-size: 15px;
+    line-height: 2;
+    text-align: center;
+    color: rgb(67, 67, 67);
+}
+
+
+@media only screen and (max-width: 700px){
+    .events{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    #article-page-heading h1{
+        font-size: 50px;
+    }
+
+    .event-heading h3{
+        font-size: 20px;
+    }
+}
