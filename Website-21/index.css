@@ -1,0 +1,615 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    font-family: sans-serif;
+}
+
+body{
+    line-height: 24px;
+    font-size: 14px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: normal;
+    color: #777777;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+}
+
+#section-banner{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5% 10%;
+    justify-content: space-between;
+    background-image: url('../Website-21/images/home-banner.jpg.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+#section-banner h1{
+    line-height: 1.5;
+    font-size: 60px;
+    width: 49%;
+}
+
+#section-banner p{
+    font-weight: normal;
+    font-size: 13px;
+    text-align: justify;
+    padding: 20px 0px;
+    width: 50%;
+}
+
+.section-image img{
+    width: 85%;
+}
+
+.btn{
+    border: none;
+    border-radius: 5px;
+    padding: 15px 40px;
+    width: fit-content;
+    color: rgb(51, 51, 51);
+    font-family: inherit;
+    background-color: white;
+    cursor: pointer;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 13px;
+}
+
+#features-banner{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 2% 10% 5% 10%;
+    align-items: center;
+    justify-content: center;
+}
+
+#features-banner > div:nth-child(1){
+    padding: 3%;
+}
+
+#features-banner h2{
+    color: black;
+    text-align: center;
+    padding: 2%;
+    font-size: 32px;
+    font-weight: normal;
+}
+
+#features-banner > div:nth-child(1) > p{
+    text-align: center;
+    color: black;
+}
+
+.feature-description{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2%;
+}
+
+.feature{
+    padding: 5%;
+    background-color: white;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 5px;
+    flex-basis: 45%;
+}
+
+.feature h3{
+    color: black;
+    padding: 4% 0%;
+}
+
+.feature p{
+    text-align: left;
+    line-height: 2;
+    color: rgb(101, 101, 101);
+    font-size: 13px;
+}
+
+#feature-banner-1, #feature-banner-2{
+    padding: 2% 10%;
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(243, 243, 243);
+}
+
+.feature-1-description{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.feature-1-description h3{
+    font-size: 45px;
+    color: black;
+    line-height: 1.3;
+}
+
+.feature-1-description p{
+    color: rgb(84, 84, 84);
+    padding: 5% 0%;
+    width: 80%;
+}
+
+.feature-btn{
+    width: 150px;
+    padding: 2.5% 5%;
+    background-image: linear-gradient(to right,#bc2bff 0%,#7249fb 51%,#bc2bff 100%);
+    color: white;
+    border: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#pricing-banner{
+    padding: 5%;
+}
+
+.price-heading{
+    padding-bottom: 5%;
+    text-align: center;
+}
+
+.price-heading h3, .screenshots-header h3, .testimonial-heading h3{
+    font-size: 40px;
+    padding: 2% 5%;
+    color: black;
+    font-weight: 500;
+}
+
+.price-heading p, .screenshots-header p, .testimonial-heading p{
+    width: 40%;
+    color: rgb(100, 100, 100);
+    margin: 0 auto;
+}
+
+.price-description{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.price{
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    flex-basis: 29%;
+    margin: 2%;
+}
+
+.price-rate{
+    border-bottom: 1px solid gray;
+    padding: 8%;
+    display: flex;
+    flex-direction: row;
+}
+
+.price-rate p{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+
+.price-rate span{
+    font-weight: normal;
+    font-size: 13px;
+}
+
+.price-rate h4{
+    text-align: right;
+    font-size: 35px;
+}
+
+.price-features{
+    padding: 8%;
+    text-align: center;
+}
+
+.price-features ul{
+    list-style-type: none;
+}
+
+.price-features li{
+    padding: 2%;
+    font-size: 13px;
+}
+
+.price-btn{
+    background-color: white;
+    border: 2px solid white;
+    padding: 3% 10%;
+    border-radius: 2px;
+    font-weight: bold;
+    margin: 4% 0%;
+    cursor: pointer;
+}
+
+.price-btn:hover{
+    color: white;
+    background-color: black;
+}
+
+#screenshots-banner{
+    padding: 5%;
+    background-color: rgb(243, 243, 243);
+}
+
+.screenshots-header{
+    text-align: center;
+    padding-bottom: 5%;
+}
+
+.screenshots-description{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+.screenshot-image{
+    flex-basis: 25%;
+}
+
+#testimonial-banner{
+    padding: 5%;
+}
+
+.testimonial-heading{
+    text-align: center;
+}
+
+.testimonial-description{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.profile{
+    flex-basis: 40%;
+    margin: 2%;
+    padding: 3% 5%;
+    display: inherit;
+    flex-direction: inherit;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 4px;
+    background-color: black;
+    color: white;
+}
+
+.profile-picture{
+    padding: 2%;
+    display: flex;
+    align-items: center;
+}
+
+.profile-description{
+    padding-left: 2%;
+    display: flex;
+    color: rgb(208, 208, 208);
+    flex-direction: column;
+}
+
+.profile-description h4{
+    font-size: 28px;
+    color: white;
+    padding: 3% 0% 1% 0%;
+}
+
+.profile-description span{
+    font-size: 12px;
+}
+
+@media only screen and (max-width: 700px){
+
+    .section-image{
+        display: none;
+    }
+
+    #section-banner{
+        min-height: 60vh;
+        display: block;
+    }
+
+    #section-banner h1{
+        width: 260px;
+        font-size: 35px;
+    }
+
+    #section-banner p{
+        width: 100%;
+    }
+
+    #features-banner{    
+        padding: 6%;
+    }
+
+    #features-banner h2{
+        padding-bottom: 2%;
+        font-size: 25px;
+    }
+
+    .feature-description{
+        grid-template-columns: repeat(1, 2fr);
+    }
+
+    #feature-banner-1, #feature-banner-2{
+        padding: 5% 10%;
+        flex-direction: column;
+    }
+
+    .feature-1-description h3{
+        font-size: 25px;
+    }
+
+    .feature-1-description p{
+        width: 100%;
+    }
+
+    .feature-image-1{
+        width: 100%;
+        padding: 4%;
+    }
+
+    .feature-image-1 img{
+        width: inherit;
+    }
+
+    .feature-btn{
+        width: 200px;
+    }
+
+    .price{
+        flex-basis: 70%;
+    }
+    
+    .price-heading h3{
+        font-size: 25px;
+        padding: 2% 5%;
+        color: black;
+        font-weight: 500;
+        text-align: center;
+    }
+
+    .price-heading p{
+        width: 100%;
+        text-align: center;
+        color: rgb(100, 100, 100);
+        margin: 0 auto;
+    }
+
+    .screenshots-description{
+        flex-direction: column;
+    }
+
+    .screenshot-image{
+        flex-basis: 50%;
+    }
+
+    .screenshots-header p{
+        width: 100%;
+        padding: 3% 0%;
+    }
+
+    .screenshots-header h3{
+        font-size: 28px;
+    }
+
+    .testimonial-description{
+        flex-direction: column;
+    }
+
+    .profile{
+        flex-basis: 100%;
+        display: flex !important;
+        flex-direction: row;
+    }
+
+    .profile-description h4{
+        font-size: 20px;
+    }
+}
+
+@media only screen and (min-width: 700px) and (max-width: 1000px){
+
+    .section-image{
+        display: none;
+    }
+
+    #section-banner{
+        min-height: 60vh;
+        display: block;
+    }
+    
+    #section-banner h1{
+        width: 450px;
+        font-size: 60px;
+    }
+
+    #section-banner p{
+        width: 450px;
+    }
+
+    #features-banner{
+        padding: 6%;
+    }
+
+    #features-banner h2{
+        padding-bottom: 2%;
+        font-size: 28px;
+    }
+
+    #features-banner{
+        padding: 2%;
+    }
+
+    .feature-description{
+        grid-template-columns: repeat(2, 2fr);
+    }
+
+    #feature-banner-1, #feature-banner-2{
+        padding: 5% 10%;
+        flex-direction: column;
+    }
+
+    .feature-1-description h3{
+        font-size: 35px;
+    }
+
+    .feature-1-description p{
+        width: 100%;
+    }
+
+    .feature-image-1{
+        width: 100%;
+        padding: 4%;
+    }
+
+    .feature-image-1 img{
+        width: inherit;
+    }
+
+    .feature-btn{
+        width: 200px;
+    }
+
+    .price{
+        flex-basis: 50%;
+    }
+
+    .price-heading h3{
+        font-size: 35px;
+        padding: 2% 5%;
+        color: black;
+        font-weight: 500;
+        text-align: center;
+    }
+    
+    .price-heading p{
+        width: 80%;
+    }
+
+    .screenshots-description{
+        flex-direction: row;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    .screenshot-image img{
+        width: 80%;
+    }
+
+    .screenshots-header p{
+        width: 70%;
+    }
+
+    .testimonial-heading h3{
+        font-size: 28px;
+    }
+
+    .testimonial-heading p{
+        width: 80%;
+    }
+
+    .testimonial-description{
+        flex-direction: row;
+    }
+
+    .profile{
+        flex-basis: 70%;
+    }
+
+    .profile-description h4{
+        font-size: 22px;
+    }
+}
+
+@media only screen and (min-width: 1000px) and (max-width: 1300px){
+    
+    .section-image{
+        flex-basis: 30%;
+        display: flex;
+        padding: 5% 0%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .section-image img{
+        width: 50%;
+        padding: 5% 0%;
+    }
+
+    #section-banner{
+        padding: 2% 10%;
+        min-height: 100vh;
+    }
+    
+    #section-banner h1{
+        width: 450px;
+        font-size: 60px;
+    }
+
+    #section-banner p{
+        width: 450px;
+    }
+
+    #features-banner{
+        padding: 2%;
+    }
+
+    #features-banner h2{
+        font-size: 35px;
+        padding-bottom: 2%;
+    }
+
+    .feature-description{
+        grid-template-columns: repeat(2, 2fr);
+    }
+
+    .feature{
+        flex-basis: 50%;
+    }
+
+    #feature-banner-1{
+        padding: 5% 10%;
+    }
+
+    .feature-image-1{
+        width: 50%;
+        display: flex;
+        align-items: center;
+        padding: 0% 5%;
+    }
+
+    .feature-1-description{
+        width: 50%;
+    }
+
+    .feature-image-1 img{
+        width: 100%;
+    }
+
+    .feature-1-description h3{
+        font-size: 35px;
+    }
+
+    .screenshot-image img{
+        width: 80%;
+    }
+}
