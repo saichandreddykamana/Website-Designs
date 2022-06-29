@@ -1,0 +1,5 @@
+1.) Yes, in my previous company, I need to develop a feature in the application where it sends the uploaded excel to the API and get the details from the excel sheet.
+
+2.) First, I will divide the task into sub-tasks logically. In this task, the main important thing is to get the information from the API. so, my first approach isto get the information from the API. Once i get the information, then i concentrated on the front-end of the page, i.e, the calendar layout. So, the second sub-task isto the design the calendar layout. And in the third step, i matched the dates from the calendar with the dates from the launch, this helps the user to see on which dates the launch is happening. In the final step, I created on click function to show details about the launch for the selected date.
+
+3.) Currently, the page has low-level design. So, if more time is given i will try to improve the page design.
