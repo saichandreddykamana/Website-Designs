@@ -13,8 +13,28 @@
         <div class="heading">
             <h1>Space X Calendar</h1>
         </div>
+        <div class="calendar">
+            <div class="calendar-selector">
+                <select name="month" id="month" class="selector" onchange="changeCalenderLayout()">
+                    <option value="january" selected> January </option>
+                    <option value="febuary"> Febuary </option>
+                    <option value="march"> March </option>
+                    <option value="april"> April </option>
+                    <option value="may"> May </option>
+                    <option value="june"> June </option>
+                    <option value="july"> July </option>
+                    <option value="august"> August </option>
+                    <option value="september"> September </option>
+                    <option value="october"> October </option>
+                    <option value="november"> November </option>
+                    <option value="december"> December </option>
+                </select>
+            </div>
+            <div class="calendar-content">
+                <div class="calendar-layout" id="calendar-layout"></div>
+            </div>
+        </div>
     </div>
-    <div id="all-launches"></div>
     <script src="../SpaceX Calendar/SpaceXCalendar.js"></script>
 </body>
 </html>

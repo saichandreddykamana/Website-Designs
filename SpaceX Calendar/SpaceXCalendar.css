@@ -28,14 +28,81 @@ body{
     font-size: 3em;
 }
 
+.calendar{
+    padding: 2rem;
+}
+
+.calendar-selector{
+    margin: 0 auto;
+    text-align: center;
+}
+
+.selector{
+    padding: 15px 10px;
+    background-color: inherit;
+    border: 2px solid black;
+    border-radius: 3px;
+    width: 30%;
+    cursor: pointer;
+}
+
+.calendar-content{
+
+}
+
+.calendar-layout{
+    padding: 3%;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(5, 1fr);
+    width: 50%;
+    margin: 2% auto;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.day{
+    padding: 15px;
+    border-radius: 5px;
+    margin: 5px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.day:hover{
+    background-color: #000000;
+    color: white;
+}
+
 @media only screen and (max-width:800px) {
     .heading h1{
         font-size: 2.5em;
+    }
+
+    .selector{
+        width: 60%;
+    }
+
+    .calendar-layout{
+        width: 70%;
+        margin: 5% auto;
     }
 }
 
 @media only screen and (max-width:600px) {
     .heading h1{
         font-size: 1.5em;
+    }
+
+    .selector{
+        width: 100%;
+    }
+
+    .calendar-layout{
+        width: 100%;
+        margin: 5% auto;
     }
 }
