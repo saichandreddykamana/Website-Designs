@@ -1,5 +1,5 @@
 var all_launches = [];
-
+var data = {};
 
 // function to get all upcoming launches from spacex using API call.
 function getUpcomingLaunches(){
@@ -11,6 +11,7 @@ function getUpcomingLaunches(){
             if(request.status == 200){
                 all_launches = JSON.parse(this.response);
                 changeCalenderLayout();
+                getNextLaunch();
             }
         }
 }
@@ -41,6 +42,61 @@ function launchDay(index, month){
         if(index == launch_month){
             document.getElementsByClassName('day')[launch_date - 1].style.backgroundColor = 'green';
             document.getElementsByClassName('day')[launch_date - 1].style.color = 'white';
+            document.getElementsByClassName('day')[launch_date - 1].onclick = launchDetails;
         }
     }
+}
+
+// showing launch details when clicked on the launch date
+function launchDetails(){
+    var launch_date = $(this).index('.day') + 1;
+    document.getElementById('launch-day-details').style.display = 'block';
+    var details = '';
+    for(var i = 0 ; i < all_launches.length ; i++){
+        var date = new Date(all_launches[i].date_utc);
+        var month = new Date(all_launches[i].date_utc);
+        var selected_month = document.getElementById('month').selectedIndex;
+        if(launch_date == date.getDate() && month.getMonth() == selected_month){
+            document.getElementById('launch-day').style.display = 'block';
+            document.getElementById('launch-day-heading').innerText =" List of " + launch_date + " - " + document.getElementById('month').value + " - 2022 Launches"; 
+            var launchpad = getLaunchpad(all_launches[i].launchpad);
+            details += "<p class='launch'> <b> Name : </b>" + all_launches[i].name + "<br><b> Flight Number : </b>" + all_launches[i].flight_number + "<br><b> LaunchPad : </b>" + launchpad +  "</p>";
+        }
+    }
+    document.getElementById('launch-day-details').innerHTML = details;
+}
+
+
+// getting launchpad details using API call
+function getLaunchpad(id){
+    $.ajax({
+        url: 'https://api.spacexdata.com/v4/launchpads/' + id,
+        type: 'GET',
+        async: false,
+        success:function(result){
+            data = result;
+        }
+    })
+    return data.name;
+}
+
+// showing next launch from the data collected from API
+function getNextLaunch(){
+    all_launches.sort(nextLaunch);
+    var launchpad = getLaunchpad(all_launches[0].launchpad);
+    document.getElementById('upcoming-launch').innerHTML =  "<p class='next-launch'> <b> Name : </b>" + all_launches[0].name + "<br><b> Flight Number : </b>" + all_launches[0].flight_number + "<br><b> LaunchPad : </b>" + launchpad +  "</p>";
+}
+
+
+// sorting launches array to get the next launch from current date
+function nextLaunch(previous, next){
+    var previous_date = new Date(previous.date_utc);
+    var next_date = new Date(next.date_utc);
+    if(previous_date > next_date){
+        return 1;
+    }
+    if(previous_date < next_date){
+        return -1;
+    }
+    return 0;
 }
