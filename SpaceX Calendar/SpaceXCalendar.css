@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@200;600&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #f8f8f8;
+}
+
+.container{
+    padding: 10px;
+}
+
+.heading{
+    padding: 10px;
+    width: fit-content;
+    margin: auto;
+}
+
+.heading h1{
+    text-transform: uppercase;
+    font-family: 'Anek Malayalam', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    font-size: 3em;
+}
+
+@media only screen and (max-width:800px) {
+    .heading h1{
+        font-size: 2.5em;
+    }
+}
+
+@media only screen and (max-width:600px) {
+    .heading h1{
+        font-size: 1.5em;
+    }
+}
