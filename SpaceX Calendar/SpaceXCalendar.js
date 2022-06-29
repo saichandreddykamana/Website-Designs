@@ -27,4 +27,20 @@ function changeCalenderLayout(){
         calendar += "<span class='day''>" + (i + 1) + "</span>"; 
     }
     document.getElementById('calendar-layout').innerHTML = calendar;
+    launchDay(month.selectedIndex, month.value);
+}
+
+
+// function to mark the launch date in the calendar layout
+function launchDay(index, month){
+    for(var i = 0 ; i < all_launches.length ; i++){
+        var launch = new Date(all_launches[i].date_utc);
+        let launch_month = launch.getMonth();
+        let launch_date = launch.getDate();
+        var launch_det = all_launches[i]; 
+        if(index == launch_month){
+            document.getElementsByClassName('day')[launch_date - 1].style.backgroundColor = 'green';
+            document.getElementsByClassName('day')[launch_date - 1].style.color = 'white';
+        }
+    }
 }
